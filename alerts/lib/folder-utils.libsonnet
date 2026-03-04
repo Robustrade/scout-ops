@@ -1,4 +1,4 @@
-// Helper function to create a Grafana dashboard folder
+// Helper function to create a dashboard folder
 local createFolder(name="env+name", title= 'env+name') = {
   apiVersion: 'grizzly.grafana.com/v1alpha1',
   kind: 'DashboardFolder',

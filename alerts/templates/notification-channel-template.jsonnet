@@ -1,4 +1,4 @@
-local contactPointUtils = import '../lib/notification-channel-utils.libsonnet';
+local contactPointUtils = import '../lib/contact-point-utils.libsonnet';
 
 // Template function to create contact points for an environment
 local createContactPointWithIntegrations(env, secrets) = [
@@ -17,7 +17,7 @@ local createContactPointWithIntegrations(env, secrets) = [
     settings={
       integrationKey: secrets[env].pagerDutyKey,
       severity: 'critical',
-      component: 'grafana',
+      component: 'alerts',
       group: env + '-alerts',
     }
   ),

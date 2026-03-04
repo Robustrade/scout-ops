@@ -1,4 +1,4 @@
-name: Grizzly Grafana deploy
+name: Alert Deploy
 
 on:
   workflow_dispatch:
@@ -11,54 +11,51 @@ on:
         options:
           - diff
           - apply
-      environment:
-        description: 'Environment'
-        required: true
-        default: 'stage'
-        type: choice
-        options:
-          - stage
-          - prod
-      team:
-        description: 'Team name'
-        required: true
-        default: 'devops'
-        type: choice
-        options:
-          - devops
-      service:
-        description: 'Service/Resource name'
-        required: true
-        default: 'web-server'
-        type: choice
-        options:
-          - web-server
 
 env:
-  GRAFANA_URL: ${{ vars.GRAFANA_URL }}
-  GRAFANA_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
+  ALERT_PLATFORM_URL: ${{ vars.ALERT_PLATFORM_URL }}
+  ALERT_PLATFORM_TOKEN: ${{ secrets.ALERT_PLATFORM_TOKEN }}
+  SPECS_REPO: ${{ vars.SPECS_REPO }}
 
 permissions:
   contents: read
 
 jobs:
-  grizzly-alerts:
+  deploy-alerts:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: alerts
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Grizzly
+      - name: Checkout specs repo
+        if: ${{ env.SPECS_REPO != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.SPECS_REPO }}
+          path: specs
+          token: ${{ secrets.SPECS_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Ensure specs directory exists
+        run: |
+          if [ ! -d ../specs/alerts/endpoints ]; then
+            echo "ERROR: specs/alerts/endpoints not found."
+            echo "Set vars.SPECS_REPO to the specs repository, or commit specs/ locally in this repo."
+            exit 1
+          fi
+
+      - name: Install grr
         run: |
           curl -fsSL https://github.com/grafana/grizzly/releases/latest/download/grr-linux-amd64 -o grr
           chmod +x grr
           sudo mv grr /usr/local/bin/
 
-      - name: Configure Grizzly
+      - name: Configure grr
         run: |
             make config
-            
 
       - name: Install jsonnet
         run: |
@@ -68,34 +65,26 @@ jobs:
       - name: Set workflow variables
         run: |
           echo "ACTION=${{ github.event.inputs.action }}" >> $GITHUB_ENV
-          echo "ENVIRONMENT=${{ github.event.inputs.environment }}" >> $GITHUB_ENV
-          echo "TEAM=${{ github.event.inputs.team }}" >> $GITHUB_ENV
-          echo "SERVICE=${{ github.event.inputs.service }}" >> $GITHUB_ENV
 
-      - name: Generate Grizzly resources
+      - name: Generate resources
         run: |
-          echo "Generating resources for:"
-          echo "  Environment: $ENVIRONMENT"
-          echo "  Team: $TEAM"
-          echo "  Service: $SERVICE"
-          echo "  Action: $ACTION"
-
-          make generate ENVIRONMENT="$ENVIRONMENT" TEAM="$TEAM" SERVICE="$SERVICE"
+          echo "Generating resources for action: $ACTION"
+          make generate
 
       - name: Show generated resources
         run: |
           echo "=== GENERATED RESOURCES ==="
-          cat resources.json
+          cat generated/resources.json
 
       - name: Preview changes (diff)
         if: ${{ env.ACTION == 'diff'}}
         run: |
-          echo "=== GRIZZLY DIFF ==="
-          make diff ENVIRONMENT="$ENVIRONMENT" TEAM="$TEAM" SERVICE="$SERVICE"
+          echo "=== DIFF ==="
+          make diff
 
       - name: Apply changes
         if: ${{ env.ACTION == 'apply' && github.ref == 'refs/heads/main' }}
         run: |
-          echo "=== GRIZZLY APPLY ==="
-          make apply ENVIRONMENT="$ENVIRONMENT" TEAM="$TEAM" SERVICE="$SERVICE"
+          echo "=== APPLY ==="
+          make apply
           echo "=== CHANGES APPLIED ==="

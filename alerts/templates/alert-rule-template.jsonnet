@@ -31,10 +31,10 @@ local createAlertRuleGroup(title, folderUid, alertRules, interval=300, teamConfi
             datasource: defaultDataConfig.datasource,
             query: rule.query,
             relativeTimeRange: if std.objectHas(rule, 'relativeTimeRange') && rule.relativeTimeRange != null then rule.relativeTimeRange else defaultRelativeTimeRange,
-            dateTimeColDataType: rule.dateTimeColDataType,
-            dateTimeType: rule.dateTimeType,
-            format: rule.format,
-            table: rule.table,
+            dateTimeColDataType: if std.objectHas(rule, 'dateTimeColDataType') && rule.dateTimeColDataType != null then rule.dateTimeColDataType else 'TimeUnix',
+            dateTimeType: if std.objectHas(rule, 'dateTimeType') && rule.dateTimeType != null then rule.dateTimeType else 'DATETIME64',
+            format: if std.objectHas(rule, 'format') && rule.format != null then rule.format else 'time_series',
+            table: if std.objectHas(rule, 'table') && rule.table != null then rule.table else '',
             refId: 'A'
           }
         },
@@ -86,10 +86,10 @@ local createAlertRuleGroup(title, folderUid, alertRules, interval=300, teamConfi
       ],
       noDataState:  if std.objectHas(rule, 'noDataState') && rule.noDataState != null then rule.noDataState else 'NoData',
       execErrState: if std.objectHas(rule, 'execErrState') && rule.execErrState != null then rule.execErrState else 'Alerting',
-      'for': if std.objectHas(rule, 'for') && rule.pendingPeriod != null then rule.pendingPeriod else defaultEvalConfig.pendingPeriod,
+      'for': if std.objectHas(rule, 'pendingPeriod') && rule.pendingPeriod != null then rule.pendingPeriod else defaultEvalConfig.pendingPeriod,
       keepFiringFor: if std.objectHas(rule, 'keepFiringFor') && rule.keepFiringFor != null then rule.keepFiringFor else defaultEvalConfig.keepFiringFor,
       annotations: rule.annotations,
-      labels: if std.objectHas(teamConfig, 'labels') && teamConfig.labels != null then teamConfig.labels else {} + if std.objectHas(rule, 'labels') && rule.labels != null then rule.labels else {},
+      labels: (if std.objectHas(teamConfig, 'labels') && teamConfig.labels != null then teamConfig.labels else {}) + (if std.objectHas(rule, 'labels') && rule.labels != null then rule.labels else {}),
       folderUID: if std.objectHas(rule, 'folderUid') && rule.folderUid != null then rule.folderUid else teamConfig.folderUid,
       notification_settings: {
         receiver: if std.objectHas(rule, 'contactPoint') && rule.contactPoint != null 

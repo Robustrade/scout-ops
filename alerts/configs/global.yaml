@@ -1,0 +1,32 @@
+envArray:
+  - prod
+
+alertPlatform:
+  folderUid: <your-folder-uid>
+  contactPoint: <your-contact-point>
+  labels:
+    team: <your-team>
+
+defaults:
+  latency:
+    severity: warning
+    eval_interval: 1m
+    lookback: 5m
+  alerting:
+    pendingPeriod: 2m
+    keepFiringFor: ""
+    noDataState: OK
+    execErrState: Alerting
+
+datasource:
+  type: <your-datasource-type>
+  uid: <your-datasource-uid>
+  database: <your-database>
+  table: <your-table>
+  dateTimeColDataType: <your-datetime-col-type>
+  dateTimeType: <your-datetime-type>
+  format: time_series
+  queryTemplate: |
+    <your-query-template>
+    Use {endpoint}, {env}, and {table} as placeholders.
+    These will be substituted per alert rule at build time.

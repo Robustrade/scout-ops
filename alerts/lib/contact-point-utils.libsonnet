@@ -10,7 +10,7 @@
              - For 'slack': { url: 'https://hooks.slack.com/...', title: 'Alert' }
              - For 'webhook': { url: 'https://example.com/webhook', httpMethod: 'POST' }
              - For 'pagerduty': { integrationKey: 'your-key-here' }
-             Refer to Grafana's documentation for the full list of supported types and their settings.
+             Refer to the alerting platform's documentation for the full list of supported types and their settings.
   - orgId: Organization ID (default: 1)
   - disableResolveMessage: Whether to disable the resolve message (default: false)
 */

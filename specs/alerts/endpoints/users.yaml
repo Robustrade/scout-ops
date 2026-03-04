@@ -1,0 +1,4 @@
+endpoint: /api/v1/users
+alerts:
+  - type: latency
+    threshold_ms: 90

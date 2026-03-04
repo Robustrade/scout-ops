@@ -8,10 +8,10 @@
 
   // Default data query configuration
   defaultDataConfig: {
-    database: 'oteldemo1',
+    database: '<your-database>',
     datasource: {
-      type: 'vertamedia-clickhouse-datasource',
-      uid: 'ds-scout-altinity-ch',
+      type: '<your-datasource-type>',
+      uid: '<your-datasource-uid>',
     },
   },
 

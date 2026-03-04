@@ -1,0 +1,5 @@
+endpoint: /api/v1/payments
+alerts:
+  - type: latency
+    threshold_ms: 120
+    severity: critical
