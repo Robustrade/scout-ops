@@ -1,3 +1,4 @@
+apis:
 - name: v2-coins-get
   methods:
   - GET
