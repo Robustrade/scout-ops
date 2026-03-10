@@ -1,0 +1,24 @@
+apis:
+  - name: v1-transactions-allowed-amounts-post
+    methods:
+      - POST
+    paths:
+      - /v1/transactions/allowed-amounts
+    service:
+      name: formance-service
+    tags:
+      team: payments
+      tier: critical
+      product: wallet
+
+  - name: v1-payments-initiate-post
+    methods:
+      - POST
+    paths:
+      - /v1/payments/initiate
+    service:
+      name: payment-service
+    tags:
+      team: payments
+      tier: critical
+      product: payments

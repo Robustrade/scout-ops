@@ -1,5 +1,4 @@
-SPEC_DIR ?= ../specs/alerts/endpoints
-SCHEMA_FILE ?= configs/schema/endpoint-alert.schema.json
+SPEC_DIR ?= ../specs
 GLOBAL_CONFIG ?= configs/global.yaml
 GENERATED_DIR ?= generated
 ALERT_CONFIGS_JSON ?= $(GENERATED_DIR)/alert-configs.json
@@ -9,8 +8,7 @@ RESOURCES_JSON ?= $(GENERATED_DIR)/resources.json
 validate:
 	@echo "=== Validating specs ==="
 	python3 scripts/validate-alerts.py \
-		--spec-dir "$(SPEC_DIR)" \
-		--schema "$(SCHEMA_FILE)"
+		--spec-dir "$(SPEC_DIR)"
 
 build-inputs: validate
 	@echo "=== Building alert inputs ==="

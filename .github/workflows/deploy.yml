@@ -41,8 +41,8 @@ jobs:
 
       - name: Ensure specs directory exists
         run: |
-          if [ ! -d ../specs/alerts/endpoints ]; then
-            echo "ERROR: specs/alerts/endpoints not found."
+          if [ ! -d ../specs/teams ]; then
+            echo "ERROR: specs/teams/ not found."
             echo "Set vars.SPECS_REPO to the specs repository, or commit specs/ locally in this repo."
             exit 1
           fi

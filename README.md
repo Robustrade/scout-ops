@@ -1,6 +1,6 @@
 # Scout Ops - Declarative Alert Management
 
-Scout Ops is a framework for managing API endpoint alerts as code. Define your endpoints and their thresholds in simple YAML files, and the pipeline takes care of validation, generation, and deployment.
+Scout Ops is a framework for managing API alerts as code. Define your APIs and their SLO thresholds in simple YAML files organized by team, and the pipeline takes care of validation, generation, and deployment.
 
 ## The Problem
 
@@ -10,24 +10,28 @@ Managing alerts for API endpoints manually doesn't scale. As the number of endpo
 
 Scout Ops treats alert definitions as code:
 
-- **YAML specs** define what to monitor and at what thresholds
+- **Team-based YAML specs** define APIs and their SLO thresholds, organized by team
+- **A global SLA file** provides default thresholds that teams can override
 - **A build pipeline** validates specs, generates alert rules, and deploys them
-- **A single global config** controls defaults, datasource settings, and query templates
-- **Per-alert overrides** let you customize anything without changing the pipeline
+- **A single global config** controls datasource settings and query templates
 
 ## How It Works
 
 ```
 specs/                              alerts/
-  endpoints/                          validate → build → render → deploy
-    users.yaml        ─────────>
-    payments.yaml     ─────────>        ↓
-    orders.yaml       ─────────>      resources.json → alerting platform
+  sla.yaml (global defaults)         validate -> build -> render -> deploy
+  teams/
+    payments/                                    |
+      api.yaml    ──────────────>
+      sla.yaml    ──────────────>              resources.json -> alerting platform
+    integrations/
+      api.yaml    ──────────────>
+      sla.yaml    ──────────────>
 ```
 
-1. **Define** endpoint alert specs in `specs/alerts/endpoints/*.yaml`
+1. **Define** team API specs in `specs/teams/<team>/api.yaml` and SLO overrides in `specs/teams/<team>/sla.yaml`
 2. **Validate** specs for correctness (required fields, duplicates, format)
-3. **Build** JSON inputs by merging specs with global defaults
+3. **Build** JSON inputs by joining APIs with SLAs and resolving fallbacks against `specs/sla.yaml`
 4. **Render** Jsonnet templates into deployable alert resources
 5. **Deploy** via `grr diff` (preview) or `grr apply` (deploy)
 
@@ -43,15 +47,61 @@ make apply     # deploy to alerting platform
 
 ## Minimal Example
 
+Define global SLO defaults:
+
 ```yaml
-# specs/alerts/endpoints/users.yaml
-endpoint: /api/v1/users
-alerts:
-  - type: latency
-    threshold_ms: 90
+# specs/sla.yaml
+apis:
+  - name: "*"
+    slo:
+      error_rate:
+        threshold: 5
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
+      latency:
+        threshold: 1000
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true
 ```
 
-This single file generates a complete alert rule with query, threshold, labels, annotations, and notification settings — all pulled from global defaults.
+Add a team with an API:
+
+```yaml
+# specs/teams/payments/api.yaml
+apis:
+  - name: v1-payments-initiate-post
+    methods:
+      - POST
+    paths:
+      - /v1/payments/initiate
+    service:
+      name: payment-service
+    tags:
+      team: payments
+      tier: critical
+      product: payments
+```
+
+Optionally override SLOs for specific APIs:
+
+```yaml
+# specs/teams/payments/sla.yaml
+apis:
+  - name: v1-payments-initiate-post
+    slo:
+      latency:
+        threshold: 800
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true
+```
+
+This generates alert rules like `v1-payments-initiate-post latency above 800ms` and `v1-payments-initiate-post error rate above 5%` (from the global default) -- with queries, labels, annotations, and notification settings all pulled from global config.
 
 ## Documentation
 
@@ -59,11 +109,9 @@ This single file generates a complete alert rule with query, threshold, labels, 
 |---|---|
 | [Getting Started](docs/getting-started.md) | Setup, prerequisites, and first deployment |
 | [Configuration](docs/configuration.md) | Global config, datasource setup, and workflow configuration |
-| [Spec Reference](docs/spec-reference.md) | Complete YAML spec format and field reference |
+| [Spec Reference](docs/spec-reference.md) | API spec, SLA spec, and SLA resolution rules |
 | [Examples](docs/examples.md) | Common use cases and patterns |
 
 ## Powered By
 
-- [Grafana](https://grafana.com/) — Alerting platform
-- [Grizzly](https://github.com/grafana/grizzly) — Infrastructure-as-code for Grafana resources
 - [Jsonnet](https://jsonnet.org/) — Data templating language

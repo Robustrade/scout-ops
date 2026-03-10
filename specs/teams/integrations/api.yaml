@@ -1,0 +1,24 @@
+apis:
+  - name: v1-services-process-post
+    methods:
+      - POST
+    paths:
+      - /v1/services/process
+    service:
+      name: integration-service
+    tags:
+      team: integrations
+      tier: high
+      product: connectors
+
+  - name: v1-webhooks-receive-post
+    methods:
+      - POST
+    paths:
+      - /v1/webhooks/receive
+    service:
+      name: webhook-service
+    tags:
+      team: integrations
+      tier: medium
+      product: webhooks

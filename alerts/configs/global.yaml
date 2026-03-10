@@ -4,14 +4,9 @@ envArray:
 alertPlatform:
   folderUid: <your-folder-uid>
   contactPoint: <your-contact-point>
-  labels:
-    team: <your-team>
+  labels: {}
 
 defaults:
-  latency:
-    severity: warning
-    eval_interval: 1m
-    lookback: 5m
   alerting:
     pendingPeriod: 2m
     keepFiringFor: ""
@@ -23,7 +18,7 @@ datasource:
   uid: <your-datasource-uid>
   database: <your-database>
   table: <your-table>
-  dateTimeColDataType: <your-datetime-col-type>
+  dateTimeColDataType: <your-datetime-col>
   dateTimeType: <your-datetime-type>
   format: time_series
   queryTemplate: |

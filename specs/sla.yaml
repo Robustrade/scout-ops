@@ -1,0 +1,15 @@
+apis:
+  - name: "*"
+    slo:
+      error_rate:
+        threshold: 5
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
+      latency:
+        threshold: 1000
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true

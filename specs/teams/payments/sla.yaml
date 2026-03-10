@@ -1,0 +1,24 @@
+apis:
+  - name: v1-transactions-allowed-amounts-post
+    slo:
+      error_rate:
+        threshold: 2
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
+      latency:
+        threshold: 500
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true
+
+  - name: v1-payments-initiate-post
+    slo:
+      latency:
+        threshold: 800
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true
