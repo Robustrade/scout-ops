@@ -1,9 +1,0 @@
-apis:
-  - name: v1-services-process-post
-    slo:
-      latency:
-        threshold: 2000
-        operator: ">"
-        unit: ms
-        window: 5m
-        alert: true
