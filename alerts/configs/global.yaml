@@ -2,8 +2,8 @@ envArray:
   - prod
 
 alertPlatform:
-  folderUid: <your-folder-uid>
-  contactPoint: <your-contact-point>
+  folderUid: 'fffkvvrsokoaof'
+  contactPoint: 'S3VsdSBwcm9kIEFsZXJ0cw'
   labels: {}
 
 defaults:
