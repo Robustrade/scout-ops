@@ -14,14 +14,14 @@ defaults:
     execErrState: Alerting
 
 datasource:
-  type: <your-datasource-type>
-  uid: <your-datasource-uid>
-  database: <your-database>
-  table: <your-table>
-  dateTimeColDataType: <your-datetime-col>
-  dateTimeType: <your-datetime-type>
+  type: "Altinity plugin for ClickHouse"
+  uid: ds-scout-altinity-ch
+  database: kulu
+  table: otel_metrics_sum
+  dateTimeColDataType: "TimeUnix"
+  dateTimeType: "DATETIME64"
   format: time_series
   queryTemplate: |
-    <your-query-template>
-    Use {endpoint}, {env}, and {table} as placeholders.
-    These will be substituted per alert rule at build time.
+    Kulu Alert:
+    Please check {endpoint}
+
