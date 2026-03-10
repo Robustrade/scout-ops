@@ -2,7 +2,7 @@ apis:
   - name: v2-coins-get
     slo:
       error_rate:
-        threshold: 0
+        threshold: 1
         operator: ">"
         unit: percent
         window: 5m
