@@ -3,7 +3,7 @@ envArray:
 
 alertPlatform:
   folderUid: 'fffkvvrsokoaof'
-  contactPoint: 'S3VsdSBwcm9kIEFsZXJ0cw'
+  contactPoint: 'Kulu prod Alerts'
   labels: {}
 
 defaults:
