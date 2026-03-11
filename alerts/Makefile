@@ -22,8 +22,8 @@ build-inputs: validate
 generate: build-inputs
 	@echo "=== Rendering resources ==="
 	jsonnet \
-		--ext-str ALERT_CONFIGS="$$(cat $(ALERT_CONFIGS_JSON))" \
-		--ext-str TEAM_CONFIGS="$$(cat $(TEAM_CONFIG_JSON))" \
+		--ext-str-file ALERT_CONFIGS="$(ALERT_CONFIGS_JSON)" \
+		--ext-str-file TEAM_CONFIGS="$(TEAM_CONFIG_JSON)" \
 		main.jsonnet > "$(RESOURCES_JSON)"
 	@echo "$(RESOURCES_JSON) ready for diff/apply"
 
