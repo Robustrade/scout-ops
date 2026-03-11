@@ -8,10 +8,10 @@
 
   // Default data query configuration
   defaultDataConfig: {
-    database: '<your-database>',
+    database: 'kulu',
     datasource: {
-      type: '<your-datasource-type>',
-      uid: '<your-datasource-uid>',
+      type: 'vertamedia-clickhouse-datasource',
+      uid: 'ds-scout-altinity-ch',
     },
   },
 

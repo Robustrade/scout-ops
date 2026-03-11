@@ -17,11 +17,41 @@ datasource:
   type: "Altinity plugin for ClickHouse"
   uid: ds-scout-altinity-ch
   database: kulu
-  table: otel_metrics_sum
+  tables:
+    error_rate: otel_metrics_sum
+    latency: otel_metrics_histogram
   dateTimeColDataType: "TimeUnix"
   dateTimeType: "DATETIME64"
   format: time_series
-  queryTemplate: |
-    Kulu Alert:
-    Please check {endpoint}
-
+  queryTemplates:
+    error_rate: |
+      SELECT
+          $timeSeries AS t,
+          Attributes['path'] AS path,
+          Attributes['team'] AS team,
+          Attributes['code'] AS code,
+          sum(Value) AS value
+      FROM $table
+      WHERE $timeFilter
+      AND Attributes['env'] IN '{env}'
+      AND MetricName = 'kong_http_requests_total'
+      AND ResourceAttributes['k8s.cluster.name'] IN 'prod-cluster'
+      AND Attributes['team'] IN '{team}'
+      AND Attributes['path'] IN ('{endpoint}')
+      AND Attributes['code'] LIKE '5%'
+      AND Flags = 0
+      GROUP BY t, path, team, code
+      ORDER BY t
+    latency: |
+      SELECT
+          $timeSeries AS t,
+          Attributes['path'] AS path,
+          quantile(0.95)(Sum/Count) AS p95_latency
+      FROM $table
+      WHERE $timeFilter
+      AND MetricName = 'kong_request_latency_ms'
+      AND Attributes['env'] IN '{env}'
+      AND Attributes['path'] IN ('{endpoint}')
+      AND Flags = 0
+      GROUP BY t, path
+      ORDER BY t
