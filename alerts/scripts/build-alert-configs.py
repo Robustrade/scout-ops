@@ -35,8 +35,8 @@ def load_yaml(path: Path):
     return json.loads(raw)
 
 
-def render_query(template: str, endpoint: str, env: str, table: str) -> str:
-    return template.format(endpoint=endpoint, env=env, table=table)
+def render_query(template: str, endpoint: str, env: str, table: str, team: str = "") -> str:
+    return template.format(endpoint=endpoint, env=env, table=table, team=team)
 
 
 def load_global_sla(spec_dir: Path) -> dict:
@@ -132,7 +132,7 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
                     eval_interval = window
                     interval_seconds = parse_duration_seconds(eval_interval)
                     lookback_seconds = window_seconds
-                    table = ds_cfg["table"]
+                    table = ds_cfg["tables"][slo_type]
 
                     labels = dict(platform_cfg.get("labels", {}))
                     labels.update({
@@ -144,8 +144,9 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
                     })
                     labels.update(api_tags)
 
-                    query_template = ds_cfg["queryTemplate"]
+                    query_template = ds_cfg["queryTemplates"][slo_type]
                     evaluator_type = "gt" if slo_cfg.get("operator", ">") == ">" else "lt"
+                    team = api_tags.get("team", "")
 
                     rule = {
                         "title": f"{api_name} {human_type} above {display}",
@@ -158,7 +159,7 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
                                 f"({endpoint}) exceeded {display} in {env}."
                             ),
                         },
-                        "query": render_query(query_template, endpoint, env, table),
+                        "query": render_query(query_template, endpoint, env, table, team=team),
                         "relativeTimeRange": {"from": lookback_seconds, "to": 0},
                         "dateTimeColDataType": ds_cfg["dateTimeColDataType"],
                         "dateTimeType": ds_cfg["dateTimeType"],
