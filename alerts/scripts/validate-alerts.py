@@ -191,28 +191,31 @@ def validate_all(spec_dir: Path) -> int:
 
     for team_dir in team_dirs:
         team_name = team_dir.name
-        api_path = team_dir / "api.yaml"
-        sla_path = team_dir / "sla.yaml"
+        api_paths = sorted(team_dir.glob("*/*/api.yaml"))
 
-        if not api_path.exists():
-            print(f"ERROR: {team_name}: api.yaml not found in {team_dir}")
+        if not api_paths:
+            print(f"ERROR: {team_name}: no api.yaml found under {team_dir}/*/*/")
+
             failures += 1
             continue
 
-        errs, api_names = validate_team_api(api_path)
-        failures += errs
-        total_apis += len(api_names)
+        for api_path in api_paths:
+            sla_path = api_path.parent / "sla.yaml"
 
-        # Check for duplicate API names across teams
-        for name in api_names:
-            if name in all_api_names:
-                print(f"ERROR: duplicate API name '{name}' in {team_name} and {all_api_names[name]}")
-                failures += 1
-            else:
-                all_api_names[name] = team_name
+            errs, api_names = validate_team_api(api_path)
+            failures += errs
+            total_apis += len(api_names)
 
-        # Validate team SLA (optional file)
-        failures += validate_team_sla(sla_path, api_names)
+            # Check for duplicate API names across teams
+            for name in api_names:
+                if name in all_api_names:
+                    print(f"ERROR: duplicate API name '{name}' in {team_name} and {all_api_names[name]}")
+                    failures += 1
+                else:
+                    all_api_names[name] = team_name
+
+            # Validate team SLA (optional file)
+            failures += validate_team_sla(sla_path, api_names)
 
     if failures:
         print(f"Validation failed with {failures} error(s)")

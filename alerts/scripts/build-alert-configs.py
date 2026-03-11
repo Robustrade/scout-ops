@@ -48,9 +48,9 @@ def load_global_sla(spec_dir: Path) -> dict:
     return result
 
 
-def load_team_sla(team_dir: Path) -> dict:
-    """Load team SLA if exists. Returns dict of {api_name: {slo_type: slo_config}}."""
-    sla_path = team_dir / "sla.yaml"
+def load_team_sla(service_dir: Path) -> dict:
+    """Load service SLA if exists. Returns dict of {api_name: {slo_type: slo_config}}."""
+    sla_path = service_dir / "sla.yaml"
     if not sla_path.exists():
         return {}
     data = load_yaml(sla_path)
@@ -105,75 +105,77 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
     grouped_rules = defaultdict(list)
 
     for team_dir in team_dirs:
-        api_data = load_yaml(team_dir / "api.yaml")
-        team_sla = load_team_sla(team_dir)
+        for api_path in sorted(team_dir.glob("*/*/api.yaml")):
+            service_dir = api_path.parent
+            api_data = load_yaml(api_path)
+            team_sla = load_team_sla(service_dir)
 
-        for api in api_data["apis"]:
-            api_name = api["name"]
-            api_paths = api["paths"]
-            api_tags = api.get("tags", {})
-            service_name = api.get("service", {}).get("name", "")
-            endpoint = api_paths[0]
+            for api in api_data["apis"]:
+                api_name = api["name"]
+                api_paths = api["paths"]
+                api_tags = api.get("tags", {})
+                service_name = api.get("service", {}).get("name", "")
+                endpoint = api_paths[0]
 
-            resolved = resolve_slo(api_name, team_sla, global_sla)
+                resolved = resolve_slo(api_name, team_sla, global_sla)
 
-            for slo_type, slo_cfg in resolved.items():
-                if not slo_cfg.get("alert", False):
-                    continue
+                for slo_type, slo_cfg in resolved.items():
+                    if not slo_cfg.get("alert", False):
+                        continue
 
-                for env in envs:
-                    threshold = slo_cfg["threshold"]
-                    unit = slo_cfg["unit"]
-                    window = slo_cfg.get("window", "5m")
-                    window_seconds = parse_duration_seconds(window)
-                    display = format_threshold_display(threshold, unit)
-                    human_type = SLO_TYPE_LABELS.get(slo_type, slo_type)
+                    for env in envs:
+                        threshold = slo_cfg["threshold"]
+                        unit = slo_cfg["unit"]
+                        window = slo_cfg.get("window", "5m")
+                        window_seconds = parse_duration_seconds(window)
+                        display = format_threshold_display(threshold, unit)
+                        human_type = SLO_TYPE_LABELS.get(slo_type, slo_type)
 
-                    eval_interval = window
-                    interval_seconds = parse_duration_seconds(eval_interval)
-                    lookback_seconds = window_seconds
-                    table = ds_cfg["tables"][slo_type]
+                        eval_interval = window
+                        interval_seconds = parse_duration_seconds(eval_interval)
+                        lookback_seconds = window_seconds
+                        table = ds_cfg["tables"][slo_type]
 
-                    labels = dict(platform_cfg.get("labels", {}))
-                    labels.update({
-                        "env": env,
-                        "api_name": api_name,
-                        "endpoint": endpoint,
-                        "alert_type": slo_type,
-                        "service": service_name,
-                    })
-                    labels.update(api_tags)
+                        labels = dict(platform_cfg.get("labels", {}))
+                        labels.update({
+                            "env": env,
+                            "api_name": api_name,
+                            "endpoint": endpoint,
+                            "alert_type": slo_type,
+                            "service": service_name,
+                        })
+                        labels.update(api_tags)
 
-                    query_template = ds_cfg["queryTemplates"][slo_type]
-                    evaluator_type = "gt" if slo_cfg.get("operator", ">") == ">" else "lt"
-                    team = api_tags.get("team", "")
+                        query_template = ds_cfg["queryTemplates"][slo_type]
+                        evaluator_type = "gt" if slo_cfg.get("operator", ">") == ">" else "lt"
+                        team = api_tags.get("team", "")
 
-                    rule = {
-                        "title": f"{api_name} {human_type} above {display}",
-                        "labels": labels,
-                        "evaluator": {"type": evaluator_type, "params": [threshold]},
-                        "annotations": {
-                            "summary": f"{api_name} {human_type} above {display} in {env}",
-                            "description": (
-                                f"{human_type.capitalize()} for {api_name} "
-                                f"({endpoint}) exceeded {display} in {env}."
-                            ),
-                        },
-                        "query": render_query(query_template, endpoint, env, table, team=team),
-                        "relativeTimeRange": {"from": lookback_seconds, "to": 0},
-                        "dateTimeColDataType": ds_cfg["dateTimeColDataType"],
-                        "dateTimeType": ds_cfg["dateTimeType"],
-                        "format": ds_cfg["format"],
-                        "table": table,
-                        "pendingPeriod": alerting_defaults["pendingPeriod"],
-                        "keepFiringFor": alerting_defaults["keepFiringFor"],
-                        "noDataState": alerting_defaults["noDataState"],
-                        "execErrState": alerting_defaults["execErrState"],
-                        "folderUid": platform_cfg["folderUid"],
-                        "contactPoint": platform_cfg["contactPoint"],
-                    }
+                        rule = {
+                            "title": f"{api_name} {human_type} above {display}",
+                            "labels": labels,
+                            "evaluator": {"type": evaluator_type, "params": [threshold]},
+                            "annotations": {
+                                "summary": f"{api_name} {human_type} above {display} in {env}",
+                                "description": (
+                                    f"{human_type.capitalize()} for {api_name} "
+                                    f"({endpoint}) exceeded {display} in {env}."
+                                ),
+                            },
+                            "query": render_query(query_template, endpoint, env, table, team=team),
+                            "relativeTimeRange": {"from": lookback_seconds, "to": 0},
+                            "dateTimeColDataType": ds_cfg["dateTimeColDataType"],
+                            "dateTimeType": ds_cfg["dateTimeType"],
+                            "format": ds_cfg["format"],
+                            "table": table,
+                            "pendingPeriod": alerting_defaults["pendingPeriod"],
+                            "keepFiringFor": alerting_defaults["keepFiringFor"],
+                            "noDataState": alerting_defaults["noDataState"],
+                            "execErrState": alerting_defaults["execErrState"],
+                            "folderUid": platform_cfg["folderUid"],
+                            "contactPoint": platform_cfg["contactPoint"],
+                        }
 
-                    grouped_rules[(env, interval_seconds)].append(rule)
+                        grouped_rules[(env, interval_seconds)].append(rule)
 
     alert_groups = []
     for (env, interval_seconds), rules in sorted(grouped_rules.items()):
