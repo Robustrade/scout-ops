@@ -1,0 +1,262 @@
+---
+apis:
+- name: v1-agent-network-stats-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent/network-stats"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-network-stats-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent/network-stats-summary"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-network-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent/network-summary"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-revenue-history-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agent/revenue-history"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-transactions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agent/transactions"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-transactions-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/transactions/(?<transactionId>[^/]+)$"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agent-wallet-summary-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agent/wallet-summary"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agents-v2-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents-v2/export"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agents-v2-network-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents-v2/network-summary"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agents-v2-revenue-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents-v2/revenue"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agents-v2-stats-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents-v2/stats/export"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-agents-v2-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents-v2/view"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commissions/(?<id>[^/]+)$"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-payouts-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commissions/payouts"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-payouts-id-details-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commissions/payouts/(?<id>[^/]+)/details$"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-payouts-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commissions/payouts/(?<id>[^/]+)$"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-payouts-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commissions/payouts"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-rules-format-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commissions/rules/format"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-rules-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commissions/rules"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-rules-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commissions/rules/(?<id>[^/]+)$"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-backoffice-commissions-rules-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commissions/rules"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-transactions-history-v2-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions-history-v2/export"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v1-transactions-history-v2-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions-history-v2/view"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v2-agents-network-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/agents/network-summary"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v2-agents-revenue-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/agents/revenue"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments
+- name: v2-agents-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/agents/view"
+  service:
+    name: reward_commission_service
+  tags:
+    team: payments

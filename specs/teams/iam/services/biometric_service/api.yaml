@@ -1,0 +1,142 @@
+---
+apis:
+- name: v1-backoffice-biometrics-attachment-attachmentId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/biometrics/attachment/(?<attachmentId>[^/]+)$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-backoffice-biometrics-attachment-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/biometrics/attachment/(?<id>[^/]+)$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-backoffice-biometrics-organizations-id-reset-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/biometrics/organizations/(?<id>[^/]+)/reset$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-backoffice-biometrics-organizations-organizationId-reset-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/biometrics/organizations/(?<organizationId>[^/]+)/reset$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-backoffice-biometrics-request-id-details-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/biometrics/request/(?<id>[^/]+)/details$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-backoffice-biometrics-request-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/biometrics/request/view"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-id-last-request-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<id>[^/]+)/last-request$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-id-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<id>[^/]+)/request$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-id-request-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<id>[^/]+)/request/reject$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-organizationId-last-request-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<organizationId>[^/]+)/last-request$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-organizationId-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<organizationId>[^/]+)/request$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-organizationId-request-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<organizationId>[^/]+)/request/reject$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-organizations-organizationId-request-requestId-fingerprints-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/organizations/(?<organizationId>[^/]+)/request/(?<requestId>[^/]+)/fingerprints$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam
+- name: v1-biometrics-request-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/biometrics/request/(?<id>[^/]+)$"
+  service:
+    name: biometric_service
+  tags:
+    team: iam

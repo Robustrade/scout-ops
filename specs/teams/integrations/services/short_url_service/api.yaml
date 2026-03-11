@@ -1,0 +1,152 @@
+---
+apis:
+- name: kulu-health-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/health"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-code-code-id-download-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/qr-code/(?<code_id>[^/]+)/download$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-code-status-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/qr-code/status$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-code-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/backoffice/qr-code/view"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-requests
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/backoffice/qr-requests"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-requests-request-id-download-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/qr-requests/(?<request_id>[^/]+)/download$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-backoffice-qr-requests-view
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/backoffice/qr-requests/view"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-code-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/qr-code/(?<code_id>[^/]+)$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-code-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/qr-code/(?<code_id>[^/]+)$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-external-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/qr-code/external-id/(?<ext_id>[^/]+)$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/qr-code"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-status-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/qr-code/status"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: kulu-v1-qr-code-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/qr-code/view"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: short-urls-shortUrl-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/short-urls/(?<shortUrl>[^/]+)$"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations
+- name: v1-short-urls-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/short-urls"
+  service:
+    name: short_url_service
+  tags:
+    team: integrations

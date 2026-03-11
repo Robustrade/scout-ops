@@ -1,0 +1,82 @@
+---
+apis:
+- name: v1-backoffice-loyalty-programs-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/loyalty-programs/(?<id>[^/]+)$"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-backoffice-loyalty-programs-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/loyalty-programs/(?<id>[^/]+)$"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-backoffice-loyalty-programs-id-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/loyalty-programs/(?<id>[^/]+)$"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-backoffice-loyalty-programs-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/loyalty-programs"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-backoffice-loyalty-programs-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/loyalty-programs/view"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-backoffice-loyalty-transactions-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/loyalty-transactions"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-loyalty-programs-dashboard-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/loyalty-programs/dashboard"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments
+- name: v1-registration-validate-mgm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/validate-mgm"
+  service:
+    name: loyalty_service
+  tags:
+    team: payments

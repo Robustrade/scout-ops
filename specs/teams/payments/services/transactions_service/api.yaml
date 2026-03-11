@@ -1,0 +1,272 @@
+---
+apis:
+- name: backoffice-v5-transactions-id-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/accept$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: backoffice-v5-transactions-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/approve$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: backoffice-v5-transactions-id-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/confirm$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: backoffice-v5-transactions-id-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/decline$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: backoffice-v5-transactions-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/reject$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: backoffice-v5-transactions-id-request-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/backoffice/v5/transactions/(?<id>[^/]+)/request-otp$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: kulu-v1-transfer-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/transfer-check"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: kulu-v2-backoffice-transactions-history-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/backoffice/transactions-history/(?<transactionId>[^/]+)/check$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: kulu-v2-transactions-history-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/transactions-history/(?<transactionId>[^/]+)/check$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: kulu-v2-transactions-history-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/transactions-history/(?<transactionId>[^/]+)$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-backoffice-v2-transactions-history-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/v2/transactions-history/(?<transactionId>[^/]+)$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-backoffice-v2-transactions-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/v2/transactions-history/view"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-backoffice-v5-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/v5/transfers"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-transaction-id-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/transactions/(?<id>[^/]+)/confirm$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-transactions-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v1-v2-backoffice-details-v2-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v2/backoffice/details-v2/(?<transactionId>[^/]+)/check$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v2-backoffice-transactions-history-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v2/backoffice/transactions-history/(?<transactionId>[^/]+)/check$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v2-details-v2-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v2/details-v2/(?<transactionId>[^/]+)/check$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v2-transactions-history-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v2/transactions-history/(?<transactionId>[^/]+)$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v2-transactions-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/transactions-history/view"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v2-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/transfers"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transactions-id-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v5/transactions/(?<id>[^/]+)/accept$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transactions-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v5/transactions/(?<id>[^/]+)/approve$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transactions-id-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v5/transactions/(?<id>[^/]+)/confirm$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transactions-id-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v5/transactions/(?<id>[^/]+)/decline$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transactions-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v5/transactions/(?<id>[^/]+)/reject$"
+  service:
+    name: transactions_service
+  tags:
+    team: payments
+- name: v5-transfer-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v5/transfers"
+  service:
+    name: transactions_service
+  tags:
+    team: payments

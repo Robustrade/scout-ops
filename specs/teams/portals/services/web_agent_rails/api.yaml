@@ -1,0 +1,926 @@
+---
+apis:
+- name: kulu-api-v1-bulk_invitations-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/api/v1/bulk_invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-api-v1-notifications-id-download_file-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/api/v1/notifications/(?<id>[^/]+)/download_file$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-address-dictionaries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/address-dictionaries"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-auth-confirm_otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/auth/confirm_otp"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-auth-finalize_auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/auth/finalize_auth"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-auth-request_otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/auth/request_otp"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/bulk-invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-bulk-invitations-superAgentId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/bulk-invitations/(?<superAgentId>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-change_role_requests-get
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/change_role_requests"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-member-network-requests-id-leave-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/member-network-requests/(?<id>[^/]+)/leave$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-member-network-requests-leave-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/member-network-requests/leave"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-network-stats-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/network/stats"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-network-stats_summary-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/network/stats_summary"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-network-summary-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/network/summary"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-notifications-id-view-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/notifications/(?<id>[^/]+)/view$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-notifications-view-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/notifications/view"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-password-self-recovery-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/password/self-recovery/confirm"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-password-self-recovery-initiate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/password/self-recovery/initiate"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-password-self-recovery-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/password/self-recovery"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-password-self-recovery-validate-data-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/password/self-recovery/validate-data"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-get
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/payrolls"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)/approve$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-generate_error_file-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)/generate_error_file$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-get
+  methods:
+  - GET
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)/reject$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-request_adjustments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)/request_adjustments$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-id-transfers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<id>[^/]+)/transfers$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-payrolls-payroll-id-transfers-transfer-id-retry-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/payrolls/(?<payroll_id>[^/]+)/transfers/(?<transfer_id>[^/]+)/retry$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-profile-documents-preview-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/profile-documents/preview"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-profiles-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/profiles/my"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-registration-extend-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/registration/extend-registration"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-revenues-history-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/revenues/history"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-sub_agent_id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/(?<sub_agent_id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-superagent-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/superagent/check"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-transactions-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/transactions"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-transactions-transactionid-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agent/transactions/(?<transactionid>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-transfer-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/transfer-check"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/transfers"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-users-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/users/my"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent-wallets-summary-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/wallets/summary"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agent_revenues-revenue-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent_revenues/revenue"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-activity_logs-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agents/activity_logs"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-export-download
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/export/download$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-export-stats_v2-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agents/export/stats_v2"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-network-requests-summary-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/network_requests_summary$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-revenue-transfer
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/revenue_transfer$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-revenue_withdrawal
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/revenue_withdrawal$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-subagent-transfer-by-super-agent-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/subagent_transfer_by_super_agent$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-superagent-transfer-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/superagent_transfer$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-agents-transactions_history-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/agents/transactions_history/(?<transactionId>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-confirm-codes
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/withdrawal_requests/(?<id>[^/]+)/confirm_code$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal_requests/export"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal_requests"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/withdrawal_requests/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/withdrawal_requests/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal_requests"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-resend-codes
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/withdrawal_requests/(?<id>[^/]+)/resend_code$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v1-withdrawal_requests-send-codes
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/withdrawal_requests/(?<id>[^/]+)/send_code$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v2-agent-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/agent/transfers"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v2-agent-wallets-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/agent/wallets/limits"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: kulu-v2-agent-wallets-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/agent/wallets/view"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-auth-users-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/auth/users"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-bulk-invitations-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-bulk-invitations/files"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-bulk-invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-notifications-myUnread-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/notifications/myUnread$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-notifications-notificationId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/notifications/(?<notificationId>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-notifications-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent/notifications/view$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-password-self-recovery-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/password/self-recovery/password"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-get
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent/payrolls"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)/approve$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-generate_error_file-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)/generate_error_file$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)/reject$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-id-transfers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<id>[^/]+)/transfers$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-payrolls-payroll_id-transfers-transfer_id-retry-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent/payrolls/(?<payroll_id>[^/]+)/transfers/(?<transfer_id>[^/]+)/retry$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent-profiles-password-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/kulu/v1/agent/profiles/password"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent_tags-bulk_upload-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent_tags/bulk_upload"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent_tags-download_bulk_upload_template-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent_tags/download_bulk_upload_template"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent_tags-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agent_tags"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent_tags-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/agent_tags/(?<id>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agent_tags-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent_tags"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-api-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/api/bulk-invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-export-stats-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/export/stats"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-export-transactions-history-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/export/transactions-history"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-notifications-notificationId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agents/notifications/(?<notificationId>[^/]+)$"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-notifications-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/notifications/view"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-agents-transactions_history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/transactions_history/view"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-api-agents-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/api/agents/bulk-invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-export-agents-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/agents"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals
+- name: v1-export-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/bulk-invitations"
+  service:
+    name: web_agent_rails
+  tags:
+    team: portals

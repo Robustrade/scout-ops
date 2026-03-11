@@ -8,7 +8,7 @@ apis:
         window: 5m
         alert: true
       latency:
-        threshold: 1000
+        threshold: 2000
         operator: ">"
         unit: ms
         window: 5m

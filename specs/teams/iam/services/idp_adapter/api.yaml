@@ -1,0 +1,132 @@
+---
+apis:
+- name: v1-agents-auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/auth"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-agents-auth-refreshToken-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/auth/refreshToken"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-agents-logout-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/logout"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-auth-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/confirm"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-auth-refreshToken-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/refreshToken"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-auth-request-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/request-otp"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-business-auth-newPassword-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/auth/newPassword"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-business-auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/auth"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-business-auth-refreshToken-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/auth/refreshToken"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-business-logout-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/logout"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-logout-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/logout"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam
+- name: v1-users-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/users"
+  service:
+    name: idp_adapter
+  tags:
+    team: iam

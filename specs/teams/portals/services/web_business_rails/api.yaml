@@ -1,0 +1,324 @@
+---
+apis:
+- name: kulu-v1-business-notifications-id-view-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/notifications/(?<id>[^/]+)/view$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-notifications-view-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/business/notifications/view"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-export
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/export$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-get
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/business/payrolls"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)/approve$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-generate_error_file-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)/generate_error_file$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-get
+  methods:
+  - GET
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)/reject$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-request_adjustments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)/request_adjustments$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-id-transfers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<id>[^/]+)/transfers$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-payrolls-payroll_id-transfers-transfer_id-retry-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/payrolls/(?<payroll_id>[^/]+)/transfers/(?<transfer_id>[^/]+)/retry$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-transfer-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/business/transfer-check"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-business-transfers-limit-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/transfers/limit$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-register-login-activity-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/register_login_activity"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v1-trigger_login_alert_mail-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/trigger_login_alert_mail"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v2-business-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/business/transfers"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v2-business-wallets-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/business/wallets/limits"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: kulu-v2-business-wallets-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/business/wallets/view"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-api-business-lotteries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/api/business/lotteries"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-api-business-payrolls-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/api/business/payrolls"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-backoffice-payrolls-id-generate_error_file-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/payrolls/(?<id>[^/]+)/generate_error_file$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-export-transactions-history-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/export/transactions-history"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-notifications-myUnread-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/business/notifications/myUnread$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-notifications-notificationId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/business/notifications/(?<notificationId>[^/]+)$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-notifications-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/business/notifications/view$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-transaction-histories-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/business/transactions_histories"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-business-transaction-histories-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/business/transactions_histories/(?<id>[^/]+)$"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-export-campaign-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/campaign"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-export-lotteries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/lotteries"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-export-payrolls-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/payrolls"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-export-points-of-sale-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/points-of-sale"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals
+- name: v1-export-users-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/export/users"
+  service:
+    name: web_business_rails
+  tags:
+    team: portals

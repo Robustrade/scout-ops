@@ -1,0 +1,282 @@
+---
+apis:
+- name: kulu-v1-backoffice-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/coins"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v1-backoffice-export-download-id-key-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/export/download/(?<id>[^/]+)/(?<key>[^/]+)$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v1-backoffice-import-agents-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/backoffice/import/agents"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v1-backoffice-transfer-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/backoffice/transfer-check"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v2-backoffice-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/backoffice/transfers"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v2-backoffice-wallet-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/backoffice/wallets/limits"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: kulu-v2-backoffice-wallets-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/backoffice/wallets/view"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-api-backoffice-bulk-invitations-superAgentId-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/api/backoffice/bulk-invitations/(?<superAgentId>[^/]+)$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-api-backoffice-bulk-invitations-upload-invitation-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/api/backoffice/bulk-invitations/upload-invitation"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-api-backoffice-commissions-rules-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/api/backoffice/commissions/rules"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-api-bulk-invitations-superAgentId-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/api/bulk-invitations/(?<superAgentId>[^/]+)$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-api-bulk-invitations-upload-invitation-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/api/bulk-invitations/upload-invitation"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-api-commissions-rules-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/api/commissions/rules"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-agents-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/agents"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-campaign-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/campaign"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-kyc-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/kyc"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-lotteries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/lotteries"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-organizations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/organizations"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-payroll-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/payrolls"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-registration-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/registration-requests"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-superagentId-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/export/(?<superagentId>[^/]+)/bulk-invitations$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-transactions-history-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/transactions-history"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-export-users-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/export/users"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-payrolls-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/payrolls"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-payrolls-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/payrolls/(?<id>[^/]+)$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-payrolls-payroll_id-transfers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/payrolls/(?<payroll_id>[^/]+)/transfers$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-transaction_histories-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transactions_histories"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals
+- name: v1-backoffice-transaction_histories-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/transactions_histories/(?<id>[^/]+)$"
+  service:
+    name: web_backoffice_rails
+  tags:
+    team: portals

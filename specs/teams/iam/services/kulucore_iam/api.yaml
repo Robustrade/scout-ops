@@ -1,0 +1,2113 @@
+---
+apis:
+- name: kulu-v1-account-closure-validate-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/account-closure/validate"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: kulu-v1-profile-device-data-patch-iam
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/profiles/device-data$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: kulu-v1-profile-documents-sign-contract-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/profile-documents/sign-contract"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: kulu-v1-profiles-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/profiles/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: member-network-requests-change-role-requests-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/member-network-requests/change-role-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: member-network-requests-change-role-requests-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/member-network-requests/change-role-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-account-closure-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "/v1/account-closure"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-account-closure-validate-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/account-closure/validate"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-ad-profiles-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/ad-profiles/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-network-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/network-summary"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "/v1/agents/portal-users"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-id-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/agents/portal-users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/agents/portal-users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/agents/portal-users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/portal-users"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-portal-users-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/portal-users/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-revenue-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/revenue"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-search-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agents/search"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-stats-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/stats/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-stats-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/stats"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-subAgentId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/agents/(?<subAgentId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-subAgentId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/agents/(?<subAgentId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-superagent-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/superagent/check"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-superagent-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/agents/superagent"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-user-management-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/user-management"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-agents-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agents/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-account-closure-business-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/account-closure/business"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-account-closure-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/account-closure"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/agents/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-portal-users-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/agents/portal-users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-portal-users-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/agents/portal-users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-portal-users-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/agents/portal-users/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/agents"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-search-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/agents/search"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-superAgentId-subAgentId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/agents/(?<superAgentId>[^/]+)/(?<subAgentId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-agents-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/agents/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-aml-pep-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/aml-pep/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-aml-pep-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/aml-pep/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-aml-pep-kyc-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/aml-pep/kyc"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-aml-pep-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/aml-pep"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-aml-pep-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/aml-pep/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-bankAccountId-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-accounts/(?<bankAccountId>[^/]+)/approve$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-bankAccountId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-accounts/(?<bankAccountId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-bankAccountId-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-accounts/(?<bankAccountId>[^/]+)/reject$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-bankAccountId-with-bank-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-accounts/(?<bankAccountId>[^/]+)/with-bank$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-coin-coinSerial-with-bank-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-accounts/coin/(?<coinSerial>[^/]+)/with-bank$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-accounts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/bank-accounts/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-catalog-bankId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-catalog/(?<bankId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-catalog-bankId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-catalog/(?<bankId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-catalog-bankId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-catalog/(?<bankId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-catalog-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/bank-catalog"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bank-catalog-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/bank-catalog"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/bulk-invitations/files"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-id-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bulk-invitations/(?<id>[^/]+)/export$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-id-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bulk-invitations/(?<id>[^/]+)/files$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-id-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bulk-invitations/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-id-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bulk-invitations/(?<id>[^/]+)/view$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-bulk-invitations-upload-invitation-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/bulk-invitations/upload-invitation"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-business-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/business"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-qrs-archive-request-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/entrepreneurs-qrs/qrs-archive-request"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-qrs-archive-request-id-archive-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/entrepreneurs-qrs/qrs-archive-request/(?<id>[^/]+)/archive$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-qrs-archive-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/entrepreneurs-qrs/qrs-archive-request"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-qrs-generation-request-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/entrepreneurs-qrs/qrs-generation-request"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-qrs-generation-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/entrepreneurs-qrs/qrs-generation-request"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-entrepreneurs-qrs-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/entrepreneurs-qrs/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-document-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/document"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-kycId-face-comparison-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/kyc/(?<kycId>[^/]+)/face-comparison$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-kycId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/kyc/(?<kycId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-kycId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/kyc/(?<kycId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-kycId-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/kyc/(?<kycId>[^/]+)/status$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-last-ownerId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/kyc/last/(?<ownerId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-send-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/send-otp"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-kyc-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-management-organization-settings-groups-groupName-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/management/organization-settings/groups/(?<groupName>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-management-organization-settings-organizationTypeCode-roles-roleName-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/management/organization-settings/(?<organizationTypeCode>[^/]+)/roles/(?<roleName>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-management-organization-settings-organizationTypeCode-roles-roleName-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/management/organization-settings/(?<organizationTypeCode>[^/]+)/roles/(?<roleName>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-member-network-requests-change-role-requests-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/member-network-requests/change-role-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-members-id-extend-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/members/(?<id>[^/]+)/extend$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-members-id-restrict-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/members/(?<id>[^/]+)/restrict$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-members-pos-userId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/members/pos/(?<userId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-organizations-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/organizations/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-organizations-id-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/organizations/(?<id>[^/]+)/permissions$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-organizations-id-vip-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/organizations/(?<id>[^/]+)/vip$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-organizations-liveview
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/organizations/liveview$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-organizations-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/organizations/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profile-documents-attach-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/profile-documents/attach"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profile-documents-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/profile-documents/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/profiles/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/profiles/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/profiles/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-my-language-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/profiles/my/language"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-my-update-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/profiles/my/update"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-profiles-userId-reset-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/profiles/(?<userId>[^/]+)/reset-password$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-extend-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration/extend-registration"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-requests-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration-requests/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-requests-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/registration-requests/(?<id>[^/]+)/approve$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-requests-id-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/registration-requests/(?<id>[^/]+)/decline$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-requests-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/registration-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-requests-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration-requests/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-registration-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/registration/verify"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-authorities-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/authorities"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-businessUser-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/businessUser"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-activation-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)/activation$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)/permissions$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-permissions-organizations-organizationId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)/permissions/organizations/(?<organizationId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-points-of-sale-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)/points-of-sale$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-id-points-of-sale-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<id>[^/]+)/points-of-sale$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-userId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/(?<userId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-view-actionId-action-reverse-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/users/view/(?<actionId>[^/]+)/action-reverse$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-view-actions-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/view/actions"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-backoffice-users-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/users/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-bulk-invitations-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/bulk-invitations/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-bulk-invitations-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/bulk-invitations/files"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-bulk-invitations-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/bulk-invitations/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-bulk-invitations-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/bulk-invitations"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-bulk-invitations-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/bulk-invitations/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-coins-stats-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/coins/stats"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-confirm-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration/confirm-otp"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-document-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration/document"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-document-preview-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration/document-preview"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-request-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration/request-otp"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-entrepreneurs-qrs-registration-validate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/entrepreneurs-qrs/registration/validate"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-agent-kycId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/kyc/agent/(?<kycId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/kyc/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-document-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/kyc/document"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-fingerprints-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/kyc/fingerprints"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-kycId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/kyc/(?<kycId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/kyc/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-my-mgm-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/kyc/my/mgm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-my-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/kyc/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-organizations-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/kyc/organizations/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-kyc-send-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/kyc/send-otp"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-limits-next-level-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/limits/next-level"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-login-change-requests-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/login-change-requests/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-login-change-requests-init-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/login-change-requests/init"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-change-role-requests-id-get-patch
+  methods:
+  - GET
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/member-network-requests/change-role-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-change-role-requests-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/member-network-requests/change-role-requests"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-change-role-requests-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/member-network-requests/change-role-requests/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/member-network-requests/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-id-leave-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/member-network-requests/(?<id>[^/]+)/leave$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-leave-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/member-network-requests/leave"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-leave-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/member-network-requests/leave"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-member-network-requests-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/member-network-requests/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-members-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/members/permissions"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-members-pos-userId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/members/pos/(?<userId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-accounts-bankAccountId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/my/bank-accounts/(?<bankAccountId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-accounts-bankAccountId-with-bank-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/my/bank-accounts/(?<bankAccountId>[^/]+)/with-bank$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-accounts-coin-coinSerial-with-bank-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/my/bank-accounts/coin/(?<coinSerial>[^/]+)/with-bank$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-accounts-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/my/bank-accounts"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-accounts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/my/bank-accounts/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-catalog-bankId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/my/bank-catalog/(?<bankId>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-my-bank-catalog-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/my/bank-catalog"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-organizations-my-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/organizations/my/permissions"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-admin-recovery-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/admin-recovery/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-admin-recovery-initiate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/admin-recovery/initiate"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-admin-recovery-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/admin-recovery/password"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-self-recovery-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/self-recovery/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-self-recovery-initiate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/self-recovery/initiate"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-self-recovery-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/self-recovery/password"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-self-recovery-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/self-recovery"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-password-self-recovery-validate-data-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/password/self-recovery/validate-data"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profile-documents-add-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/profile-documents/add"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profile-documents-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/profile-documents"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profile-documents-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/profile-documents"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profile-documents-preview-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/profile-documents/preview"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profile-documents-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/profile-documents/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/profiles/(?<id>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-devices-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/devices"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-devices-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/devices"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-devices-token-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/profiles/my/devices/(?<token>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-language-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/language"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-organization-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/organization"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-password-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/password"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-person-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/person"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-security-settings-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/security-settings"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-update-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/update"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-my-wallet-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/profiles/my/wallet-limits"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-userId-person-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/profiles/(?<userId>[^/]+)/person$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-profiles-userId-reset-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/profiles/(?<userId>[^/]+)/reset-password$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-audio-captcha-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/registration/audio-captcha"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-by-agent-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/by-agent/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-by-agent-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/by-agent"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/confirm"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-extend-registration-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/registration/extend-registration/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-extend-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/extend-registration"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-get-captcha-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/registration/get-captcha-id"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-image-captcha-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/registration/image-captcha"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-registration-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/registration/verify"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-businessUser-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/businessUser"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/export"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-id-block-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<id>[^/]+)/block$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-id-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<id>[^/]+)/permissions$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-id-permissions-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<id>[^/]+)/permissions$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-id-points-of-sale-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<id>[^/]+)/points-of-sale$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-id-points-of-sale-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<id>[^/]+)/points-of-sale$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-login-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/users/(?<login>[^/]+)$"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-my-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/users/my"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-my-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/users/my/permissions"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam
+- name: v1-users-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/view"
+  service:
+    name: kulucore_iam
+  tags:
+    team: iam

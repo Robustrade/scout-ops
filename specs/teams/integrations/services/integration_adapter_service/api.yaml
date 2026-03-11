@@ -1,0 +1,282 @@
+---
+apis:
+- name: kulu-v1-airtime-callback-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/airtime/callback"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-fees-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/fees"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-fields-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/fields"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-order-history-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/order/history"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-order-order_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/order/(?<order_id>[^/]+)$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-bills-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/bills"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-operators-operator_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/services/operators/(?<operator_id>[^/]+)$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-operators-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/operators"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-order-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/order"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-plans-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/plans"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/process"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-reference-details-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/services/reference/details"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-transfer-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/services/transfer-check$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-transfer-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/services/transfer/confirm$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-services-transfer-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/services/transfer$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-banks-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/banks"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-cancel-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/cancel"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-order-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/order"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/process"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-reference-details-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/reference/details"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-services-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/services"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v1-withdrawal-uba-callback-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/withdrawal/uba/callback"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v2-fees-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/fees"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v2-services-bills-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/services/bills"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v2-services-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/services"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v2-services-order-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/services/order$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations
+- name: kulu-v3-services
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v3/services$"
+  service:
+    name: integration_adapter_service
+  tags:
+    team: integrations

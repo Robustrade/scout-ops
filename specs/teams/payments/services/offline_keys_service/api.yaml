@@ -1,0 +1,12 @@
+---
+apis:
+- name: v1-offline-payments-key-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/offline-payments/key"
+  service:
+    name: offline_keys_service
+  tags:
+    team: payments

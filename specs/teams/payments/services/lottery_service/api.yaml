@@ -1,0 +1,152 @@
+---
+apis:
+- name: v1-backoffice-lotteries-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/lotteries/export"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-backoffice-lotteries-lotteryId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/lotteries/(?<lotteryId>[^/]+)$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-backoffice-lotteries-lotteryId-winners-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/lotteries/(?<lotteryId>[^/]+)/winners$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-backoffice-lotteries-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/lotteries/view"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/lotteries/export"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-cancel-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)/cancel$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-purchase-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)/purchase$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-reward-payout-winnerId-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)/reward-payout/(?<winnerId>[^/]+)$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-winners-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)/winners$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-lotteryId-winners-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/(?<lotteryId>[^/]+)/winners$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-my-lotteryId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/lotteries/my/(?<lotteryId>[^/]+)$"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-participant-template-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/lotteries/participant-template"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/lotteries"
+  service:
+    name: lottery_service
+  tags:
+    team: payments
+- name: v1-lotteries-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/lotteries/view"
+  service:
+    name: lottery_service
+  tags:
+    team: payments

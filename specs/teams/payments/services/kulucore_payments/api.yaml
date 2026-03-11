@@ -1,0 +1,892 @@
+---
+apis:
+- name: v1-agent-withdrawals-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-withdrawals/calculate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-withdrawals/external/calculate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-id-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent-withdrawals/external/(?<id>[^/]+)/accept$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-id-document-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent-withdrawals/external/(?<id>[^/]+)/document$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-id-reversal-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent-withdrawals/external/(?<id>[^/]+)/reversal$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-withdrawals/external"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-external-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-withdrawals/external/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-id-resend-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/agent-withdrawals/(?<id>[^/]+)/resend-otp$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-agent-withdrawals-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/agent-withdrawals"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-b2b-requestIdentifier-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/b2b/(?<requestIdentifier>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-b2b-requestIdentifier-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/b2b/(?<requestIdentifier>[^/]+)/decline$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-bank-top-ups-requestIdentifier-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-top-ups/(?<requestIdentifier>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-bank-top-ups-requestIdentifier-document-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-top-ups/(?<requestIdentifier>[^/]+)/document$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-bank-top-ups-requestIdentifier-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-top-ups/(?<requestIdentifier>[^/]+)/reject$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-bank-withdrawals-requestIdentifier-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-withdrawals/(?<requestIdentifier>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-bank-withdrawals-requestIdentifier-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/bank-withdrawals/(?<requestIdentifier>[^/]+)/reject$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-burn-emoney-transactionId-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/burn-emoney/(?<transactionId>[^/]+)/(?<status>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-top-ups-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/cash-desk-top-ups/calculate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-top-ups-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/cash-desk-top-ups"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-top-ups-requestIdentifier-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-top-ups/(?<requestIdentifier>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-top-ups-requestIdentifier-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-top-ups/(?<requestIdentifier>[^/]+)/reject$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/cash-desk-withdrawals"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-requestIdentifier-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/accept$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-requestIdentifier-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-requestIdentifier-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/decline$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-requestIdentifier-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-cash-desk-withdrawals-requestIdentifier-request-confirmation-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/request-confirmation$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-exchange-rates-rate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/exchange-rates/rate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-exchange-rates-rate-rateId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/exchange-rates/rate/(?<rateId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-exchange-rates-rate-rateId-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/exchange-rates/rate/(?<rateId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-exchange-rates-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/exchange-rates/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-investments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/investments"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-investments-requestIdentifier-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/investments/(?<requestIdentifier>[^/]+)/accept$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-investments-requestIdentifier-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/investments/(?<requestIdentifier>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-investments-transactionId-decline-post
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/investments/(?<transactionId>[^/]+)/decline$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-payrolls-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/payrolls/export"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-payrolls-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/payrolls/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-side-menu-notifications-compliance-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/side-menu-notifications/compliance"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-side-menu-notifications-transactions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/side-menu-notifications/transactions"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-system-commissions-transfer-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/system-commissions/transfer"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transaction-categories-categoryId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/transaction-categories/(?<categoryId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transaction-categories-categoryId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/transaction-categories/(?<categoryId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transaction-categories-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transaction-categories"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transaction-categories-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transaction-categories/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transactions-history-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transactions-history/export"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transactions-history-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/transactions-history/(?<transactionId>[^/]+)/check$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transactions-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transactions-history/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-backoffice-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transfers"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/cash-desk-withdrawals/calculate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/cash-desk-withdrawals"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-requestIdentifier-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/decline$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-requestIdentifier-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-requestIdentifier-request-confirmation-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/cash-desk-withdrawals/(?<requestIdentifier>[^/]+)/request-confirmation$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-cash-desk-withdrawals-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/cash-desk-withdrawals/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-coins-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/coins/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-exchange-rates-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/exchange-rates/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-lotteries-users-search-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/lotteries/users/search"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payrolls/export"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payrolls/(?<id>[^/]+)/approve$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/payrolls/(?<id>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/payrolls/(?<id>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-id-reject-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payrolls/(?<id>[^/]+)/reject$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-id-request-adjustments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payrolls/(?<id>[^/]+)/request-adjustments$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payrolls"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-payrolls-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payrolls/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-end-session-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/points-of-sale/end-session"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/points-of-sale/export"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/points-of-sale"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-posId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/points-of-sale/(?<posId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-posId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/points-of-sale/(?<posId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-posId-start-session-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/points-of-sale/(?<posId>[^/]+)/start-session$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-posId-transactions-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/points-of-sale/(?<posId>[^/]+)/transactions/view$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/points-of-sale"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-points-of-sale-stats-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/points-of-sale/stats"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transaction-categories-categoryId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/transaction-categories/(?<categoryId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transaction-categories-categoryId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/transaction-categories/(?<categoryId>[^/]+)$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transaction-categories-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction-categories"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transaction-categories-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction-categories/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-history-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions-history/export"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-history-transactionId-check-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/transactions-history/(?<transactionId>[^/]+)/check$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-history-transactions-summary-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions-history/transactions-summary"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions-history/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-id-resend-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/transactions/(?<id>[^/]+)/resend-otp$"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transactions-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions/view"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transfers-async-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transfers/async"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transfers-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transfers/calculate"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-transfers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transfers"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v1-users-my-commission-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/users/my/commission"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments
+- name: v2-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v2/coins"
+  service:
+    name: kulucore_payments
+  tags:
+    team: payments

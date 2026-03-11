@@ -1,0 +1,82 @@
+---
+apis:
+- name: v1-backoffice-offline-payment-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/offline-payments/view"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/offline-payments/(?<id>[^/]+)$"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-phone-numbers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/offline-payments/phone-numbers"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-phone-numbers-id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/offline-payments/phone-numbers/(?<id>[^/]+)$"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-phone-numbers-id-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/offline-payments/phone-numbers/(?<id>[^/]+)$"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-phone-numbers-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/offline-payments/phone-numbers/(?<id>[^/]+)$"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-phone-numbers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/offline-payments/phone-numbers"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments
+- name: v1-backoffice-offline-payments-process-types-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/offline-payments/process-types"
+  service:
+    name: offline_payments_service
+  tags:
+    team: payments

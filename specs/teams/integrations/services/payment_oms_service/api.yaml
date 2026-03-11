@@ -1,0 +1,752 @@
+---
+apis:
+- name: v1-auth-business-login-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/auth/business/login$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-auth-business-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/business"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-auth-login-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/auth/login$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-auth-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/otp"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-auth-otp-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/auth/otp/verify"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-api-keys-api_key_id-regenerate-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/api-keys/(?<api_key_id>[^/]+)/regenerate$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-api-keys-export-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/api-keys/export$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-api-keys-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/api-keys$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customer-support-email-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customer-support/email$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customer-support-email-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customer-support/email$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customer-support-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customer-support$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customer-support-mobile-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customer-support/mobile$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customer-support-mobile-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customer-support/mobile$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customers-customer_id-payments-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customers/(?<customer_id>[^/]+)/payments$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-customers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/customers$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-orders-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/orders/export$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-orders-import-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/orders/import$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-team-members-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/team-members$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-team-members-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/team-members$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-team-members-user_id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/team-members/(?<user_id>[^/]+)/status$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-webhook-webhook_id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/webhook/(?<webhook_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-webhooks-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/webhooks$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-business_id-webhooks-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/(?<business_id>[^/]+)/webhooks$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-external-external_business_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/external/(?<external_business_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-password-user-user_id-reset-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/password/user/(?<user_id>[^/]+)/reset-password$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-platform-view-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/platform-view$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/businesses"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-businesses-team-members-user_id-details-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/businesses/team-members/(?<user_id>[^/]+)/details$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-customers-customer_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/customers/(?<customer_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-customers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/customers"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-event-event-types-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/event/event-types"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/orders/export"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-import-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/orders/import"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-list
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/orders/list$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-business-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)/business$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-cancel-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)/cancel$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-details-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)/details$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-payments-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)/payments$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-order_id-payments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/orders/(?<order_id>[^/]+)/payments$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-payments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/orders/payments"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/orders"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-orders-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/orders/view"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-fees-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payments/fees$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-order-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/order$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-orders-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/orders/view$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payment_request_id-business-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/(?<payment_request_id>[^/]+)/business$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payment_request_id-cancel-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/(?<payment_request_id>[^/]+)/cancel$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payment_request_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/(?<payment_request_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payment_request_id-recipients-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/(?<payment_request_id>[^/]+)/recipients$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payment_request_id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/(?<payment_request_id>[^/]+)/status$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-payments-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/payments/process$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-validate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/validate$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payment-request-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/payment-request/view$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payments-business-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payments/business/process"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payments-payment_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/payments/(?<payment_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payments-payment_id-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/payments/(?<payment_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payments-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payments"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-payments-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/payments/process"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-transaction_request-balance-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction_request/balance"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-transaction_request-payout-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction_request/payout"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-transaction_request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction_request"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-transaction_request-status-check-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transaction_request/status/check"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-transaction_request-transaction_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/transaction_request/(?<transaction_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-webhooks-webhook_id-disable-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/webhooks/(?<webhook_id>[^/]+)/disable$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-webhooks-webhook_id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/webhooks/(?<webhook_id>[^/]+)$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-webhooks-webhook_id-logs-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/webhooks/(?<webhook_id>[^/]+)/logs$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v1-webhooks-webhook_id-validate-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/webhooks/(?<webhook_id>[^/]+)/validate$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v2-event-event_types-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v2/event/event-types$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v2-orders
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v2/orders$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v2-payements-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v2/payments$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v2-payments-business-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v2/payments/business/process$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations
+- name: v2-payments-process-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v2/payments/process$"
+  service:
+    name: payment_oms_service
+  tags:
+    team: integrations

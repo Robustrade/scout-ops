@@ -1,0 +1,54 @@
+---
+apis:
+- name: v1-sms-otp_logs-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/sms/otp_logs"
+  service:
+    name: communication_service
+  tags:
+    team: platform
+- name: v1-sms-webhook-provider
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/sms/webhook/(?<provider>[^/]+)$"
+  service:
+    name: communication_service
+  tags:
+    team: platform
+- name: v1-sms-whatsapp-receive-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/sms/whatsapp-receive"
+  service:
+    name: communication_service
+  tags:
+    team: platform
+- name: v1-sms-whatsapp-receive-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/sms/whatsapp-receive"
+  service:
+    name: communication_service
+  tags:
+    team: platform
+- name: v1-sms-whatsapp_receive
+  methods:
+  - GET
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/sms/whatsapp_receive"
+  service:
+    name: communication_service
+  tags:
+    team: platform

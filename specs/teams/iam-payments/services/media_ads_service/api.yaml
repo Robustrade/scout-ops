@@ -1,0 +1,582 @@
+---
+apis:
+- name: v1-backoffice-campaign-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/campaign/export"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/campaign/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/campaign/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-id-reward-per-view-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/campaign/(?<id>[^/]+)/reward-per-view$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-id-reward-per-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/campaign/(?<id>[^/]+)/reward-per-view$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-side-menu-notifications-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/campaign/side-menu-notifications"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-campaign-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/campaign/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-news-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/news/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-news-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/news/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-news-id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/news/(?<id>[^/]+)/status$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-news-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/news/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-podcasts-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/podcasts/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-podcasts-id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/podcasts/(?<id>[^/]+)/status$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-backoffice-podcasts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/podcasts/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-business-media-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/business/media"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-ad-calculator-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign/ad-calculator"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-content-link-types-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/campaign/content-link-types"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign/export"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)/calculate$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-purchase-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)/purchase$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-statistics-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)/statistics$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-statistics-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)/statistics$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-id-video-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/campaign/(?<id>[^/]+)/video$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-myTargeted-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign/myTargeted"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-settings-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/campaign/settings"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-statuses-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/campaign/statuses"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-campaign-viewed-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/campaign/viewed"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-media-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/media/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-categories-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/news/categories"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news/export"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-id-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/news/(?<id>[^/]+)/calculate$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/news/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-id-purchase-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/news/(?<id>[^/]+)/purchase$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/news/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-id-statistics-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/news/(?<id>[^/]+)/statistics$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-statuses-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/news/statuses"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-upload-image-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news/upload/image"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-view-dashboard-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news/view-dashboard"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-view-my-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news/view/my"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-news-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/news/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-categories-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/categories"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-export-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/export"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-id-calculate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/podcasts/(?<id>[^/]+)/calculate$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/podcasts/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-id-purchase-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/podcasts/(?<id>[^/]+)/purchase$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/podcasts/(?<id>[^/]+)$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-id-statistics-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/podcasts/(?<id>[^/]+)/statistics$"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/podcasts"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-statuses-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/statuses"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-view-dashboard-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/view-dashboard"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-view-my-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/view/my"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-podcasts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/podcasts/view"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments
+- name: v1-tracking-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/tracking"
+  service:
+    name: media_ads_service
+  tags:
+    team: iam-payments

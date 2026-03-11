@@ -1,0 +1,72 @@
+---
+apis:
+- name: kulu-v1-wallets-balance-serial-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/wallets/balance/(?<serial>[^/]+)$"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v1-backoffice-v1-wallets-balance-serial-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/v1/wallets/balance/(?<serial>[^/]+)$"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v1-backoffice-v2-wallets-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/v2/wallets/view"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v1-coins-view-v2-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/coins/view-v2"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v1-transactions-allowed-amounts-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/transactions/allowed-amounts"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v2-wallets-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v2/wallets/limits"
+  service:
+    name: wallet_service
+  tags:
+    team: payments
+- name: v2-wallets-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v2/wallets/view"
+  service:
+    name: wallet_service
+  tags:
+    team: payments

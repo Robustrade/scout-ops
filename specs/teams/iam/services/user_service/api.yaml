@@ -1,0 +1,342 @@
+---
+apis:
+- name: kulu-v1-backoffice-kyc-fields-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/kyc/fields$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-backoffice-qr-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/backoffice/qr/status$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-device-permissions-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v1/device-permissions"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-ocr-ocrId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/ocr/(?<ocrId>[^/]+)$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-ocr-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/ocr$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v1/permissions"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-qr-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/qr/status$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v1-users-userId-permissions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/kulu/v1/users/(?<userId>[^/]+)/permissions$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-otp-request-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/otp/request"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-otp-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/otp/verify"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-password-reset-confirm-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/password-reset/confirm"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-password-reset-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/password-reset"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-password-reset-validate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/password-reset/validate"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-password-reset-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/password-reset/verify"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-refreshToken-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/auth/refreshToken"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-auth-set-new-password-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/auth/set-new-password$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-kyc-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/kulu/v2/kyc$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-registration-by-agent-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/registration/by-agent"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-registration-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/kulu/v2/registration"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-users-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/users"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-users-profile-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/users/profile"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: kulu-v2-users-profile-mini-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/kulu/v2/users/profile/mini"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-entrepreneurs-registration-by-agent-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/entrepreneurs-registration/by-agent$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-qr-by-wallet
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/qr/by-wallet$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-qr-generate-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/qr/generate$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-qr-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/qr"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-qr-link-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/qr/link"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-auth-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/auth"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-by-agent-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/users/by-agent$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-by-agent-requestId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/users/by-agent/(?<requestId>[^/]+)$"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-otp-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/otp"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-otp-verify-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/users/otp/verify"
+  service:
+    name: user_service
+  tags:
+    team: iam
+- name: v1-users-profile-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/users/profile"
+  service:
+    name: user_service
+  tags:
+    team: iam

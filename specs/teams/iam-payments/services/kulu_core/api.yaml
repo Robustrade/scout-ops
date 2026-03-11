@@ -1,0 +1,1002 @@
+---
+apis:
+- name: member-network-requests-change-role-requests-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/member-network-requests/change-role-requests"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: member-network-requests-change-role-requests-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/member-network-requests/change-role-requests/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-address-dictionaries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/address-dictionaries"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-address-dictionaries-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/address-dictionaries"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-coins-serial-block-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/coins/(?<serial>[^/]+)/block$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-contracts-contracts-approvals-id-approve-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-contracts/contracts-approvals/(?<id>[^/]+)/approve$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-contracts-contracts-approvals-id-decline-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-contracts/contracts-approvals/(?<id>[^/]+)/decline$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-contracts-contracts-approvals-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-contracts/contracts-approvals/(?<id>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-contracts-contracts-approvals-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/commission-contracts/contracts-approvals/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-profiles-profileId-sharing-rule-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-profiles/(?<profileId>[^/]+)/sharing-rule$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-profiles-profileId-sharing-rule-ruleId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-profiles/(?<profileId>[^/]+)/sharing-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-profiles-profileId-sharing-rule-ruleId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-profiles/(?<profileId>[^/]+)/sharing-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-profiles-profileId-sharing-rule-ruleId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-profiles/(?<profileId>[^/]+)/sharing-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-commission-profiles-profileId-sharing-rule-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/commission-profiles/(?<profileId>[^/]+)/sharing-rule/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-amount-rule-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/amount-rule$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-amount-rule-ruleId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/amount-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-amount-rule-ruleId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/amount-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-amount-rule-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/amount-rule/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-balance-limits-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/balance-limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-balance-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/balance-limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-balance-limits-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/balance-limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-balance-limits-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/balance-limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-ruleId-condition-conditionId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/(?<ruleId>[^/]+)/condition/(?<conditionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-ruleId-condition-conditionId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/(?<ruleId>[^/]+)/condition/(?<conditionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-ruleId-condition-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/(?<ruleId>[^/]+)/condition$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-ruleId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-ruleId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-commission-rule-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/commission-rule/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-limit-profiles-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/limit-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-limit-profiles-limitProfileId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/limit-profiles/(?<limitProfileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-limit-profiles-limitProfileId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/limit-profiles/(?<limitProfileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-commission-profiles-profileId-limit-profiles-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/commission-profiles/(?<profileId>[^/]+)/limit-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-copy-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/copy$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-ruleId-condition-conditionId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/(?<ruleId>[^/]+)/condition/(?<conditionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-ruleId-condition-conditionId-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/(?<ruleId>[^/]+)/condition/(?<conditionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-ruleId-condition-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/(?<ruleId>[^/]+)/condition$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-ruleId-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-ruleId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/(?<ruleId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-commission-provider-rule-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/commission-provider-rule/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-limit-profiles-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/limit-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-limit-profiles-limitProfileId-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/limit-profiles/(?<limitProfileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-profileId-limit-profiles-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/(?<profileId>[^/]+)/limit-profiles$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-gate-commission-profiles-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/gate-commission-profiles/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-limits-delete
+  methods:
+  - DELETE
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-limits-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-limits-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-contractId-limits-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/contracts/(?<contractId>[^/]+)/limits$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/contracts"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-contracts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/contracts/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-currencies-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/currencies"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-gate-providers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/gate-providers"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-investments-loyalty-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/investments/loyalty"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-investments-loyalty-requestIdentifier-accept-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/investments/loyalty/(?<requestIdentifier>[^/]+)/accept$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-issuers-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/issuers"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-kyc-reviewers-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/kyc/reviewers"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-limits-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/limits/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-media-files-fileId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/media-files/(?<fileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-media-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/media-files"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-operation-flows-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/operation-flows"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-organizations-cashdesk-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/organizations/cashdesk/coins"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-organizations-id-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/organizations/(?<id>[^/]+)/coins$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-organizations-system-cashdesk-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/organizations/system-cashdesk/coins"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-cancel-calculation-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)/cancel/calculation$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-cancel-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)/cancel$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-put
+  methods:
+  - PUT
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-rebate-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)/rebate-history/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-retry-payment-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)/retry-payment$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/smart-contracts/(?<id>[^/]+)/status$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/smart-contracts"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-smart-contracts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/smart-contracts/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-tasks-taskIdentifier-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/tasks/(?<taskIdentifier>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-transactions-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/backoffice/transactions/(?<transactionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-backoffice-transactions-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/backoffice/transactions/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-coins-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/coins"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-configuration-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/configuration"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-country-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/country"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-limits-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/limits/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-media-files-fileId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/media-files/(?<fileId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-media-files-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/media-files"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-notifications-myUnread-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/notifications/myUnread"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-notifications-notificationId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/notifications/(?<notificationId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-notifications-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/notifications/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-offices-agent-locations-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/offices/agent-locations/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-offices-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/offices/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-operation-flows-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/operation-flows"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-smart-contracts-id-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/smart-contracts/(?<id>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-smart-contracts-id-rebate-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/smart-contracts/(?<id>[^/]+)/rebate-history/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-smart-contracts-id-status-patch
+  methods:
+  - PATCH
+  - OPTIONS
+  paths:
+  - "~/v1/smart-contracts/(?<id>[^/]+)/status$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-smart-contracts-organizationId-rebate-history-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "~/v1/smart-contracts/(?<organizationId>[^/]+)/rebate-history/view$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-smart-contracts-view-post
+  methods:
+  - POST
+  - OPTIONS
+  paths:
+  - "/v1/smart-contracts/view"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-supported-versions-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "/v1/supported-versions"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
+- name: v1-transactions-transactionId-get
+  methods:
+  - GET
+  - OPTIONS
+  paths:
+  - "~/v1/transactions/(?<transactionId>[^/]+)$"
+  service:
+    name: kulu_core
+  tags:
+    team: iam-payments
