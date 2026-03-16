@@ -35,8 +35,9 @@ def load_yaml(path: Path):
     return json.loads(raw)
 
 
-def render_query(template: str, endpoint: str, env: str, table: str, team: str = "") -> str:
-    return template.format(endpoint=endpoint, env=env, table=table, team=team)
+def render_query(template: str, endpoint: str, env: str, table: str, team: str = "", service: str = "") -> str:
+    kong_service = service.replace("_", "-")
+    return template.format(endpoint=endpoint, env=env, table=table, team=team, service=kong_service)
 
 
 def load_global_sla(spec_dir: Path) -> dict:
@@ -90,7 +91,7 @@ SLO_TYPE_LABELS = {
 }
 
 
-def build_outputs(spec_dir: Path, global_config_path: Path):
+def build_outputs(spec_dir: Path, global_config_path: Path, team_filter=None, api_filter=None, limit=None):
     global_config = load_yaml(global_config_path)
 
     envs = global_config["envArray"]
@@ -101,6 +102,10 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
     global_sla = load_global_sla(spec_dir)
     teams_dir = spec_dir / "teams"
     team_dirs = sorted([d for d in teams_dir.iterdir() if d.is_dir()])
+    if team_filter:
+        team_dirs = [d for d in team_dirs if d.name == team_filter]
+        if not team_dirs:
+            raise ValueError(f"Team '{team_filter}' not found in {teams_dir}")
 
     grouped_rules = defaultdict(list)
 
@@ -112,6 +117,8 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
 
             for api in api_data["apis"]:
                 api_name = api["name"]
+                if api_filter and api_name != api_filter:
+                    continue
                 api_paths = api["paths"]
                 api_tags = api.get("tags", {})
                 service_name = api.get("service", {}).get("name", "")
@@ -161,7 +168,7 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
                                     f"({endpoint}) exceeded {display} in {env}."
                                 ),
                             },
-                            "query": render_query(query_template, endpoint, env, table, team=team),
+                            "query": render_query(query_template, endpoint, env, table, team=team, service=service_name),
                             "relativeTimeRange": {"from": lookback_seconds, "to": 0},
                             "dateTimeColDataType": ds_cfg["dateTimeColDataType"],
                             "dateTimeType": ds_cfg["dateTimeType"],
@@ -178,12 +185,18 @@ def build_outputs(spec_dir: Path, global_config_path: Path):
                         grouped_rules[(env, interval_seconds)].append(rule)
 
     alert_groups = []
+    rules_remaining = limit
     for (env, interval_seconds), rules in sorted(grouped_rules.items()):
+        if rules_remaining is not None:
+            rules = rules[:rules_remaining]
+            rules_remaining -= len(rules)
         alert_groups.append({
             "name": f"api-alerts-{env}-{interval_seconds}s",
             "interval": interval_seconds,
             "alertRules": rules,
         })
+        if rules_remaining is not None and rules_remaining <= 0:
+            break
 
     alert_configs = {"alertGroups": alert_groups}
     team_config = {
@@ -201,6 +214,9 @@ def parse_args():
     parser.add_argument("--global-config", required=True)
     parser.add_argument("--alert-configs-out", required=True)
     parser.add_argument("--team-config-out", required=True)
+    parser.add_argument("--team", default=None, help="Filter to a single team")
+    parser.add_argument("--api", default=None, help="Filter to a single API name (for testing)")
+    parser.add_argument("--limit", type=int, default=None, help="Limit total alert rules (for testing)")
     return parser.parse_args()
 
 
@@ -209,6 +225,9 @@ def main() -> int:
     alert_configs, team_config = build_outputs(
         spec_dir=Path(args.spec_dir),
         global_config_path=Path(args.global_config),
+        team_filter=args.team,
+        api_filter=args.api,
+        limit=args.limit,
     )
     with Path(args.alert_configs_out).open("w", encoding="utf-8") as f:
         json.dump(alert_configs, f, indent=2)

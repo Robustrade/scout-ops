@@ -18,40 +18,40 @@ datasource:
   uid: ds-scout-altinity-ch
   database: kulu
   tables:
-    error_rate: otel_metrics_sum
-    latency: otel_metrics_histogram
-  dateTimeColDataType: "TimeUnix"
+    error_rate: otel_traces
+    latency: otel_traces
+  dateTimeColDataType: "Timestamp"
   dateTimeType: "DATETIME64"
   format: time_series
   queryTemplates:
     error_rate: |
       SELECT
-          $timeSeries AS t,
-          Attributes['path'] AS path,
-          Attributes['team'] AS team,
-          Attributes['code'] AS code,
-          sum(Value) AS value
-      FROM $table
+          ROUND(
+              countIf(
+                  SpanAttributes['http.status_code'] LIKE '2%'
+                  OR SpanAttributes['http.response.status_code'] LIKE '2%'
+              ) * 100.0 /
+              countIf(
+                  SpanAttributes['http.status_code'] != ''
+                  OR SpanAttributes['http.response.status_code'] != ''
+              ), 2) AS ErrorRate
+      FROM kulu.{table}
       WHERE $timeFilter
-      AND Attributes['env'] IN '{env}'
-      AND MetricName = 'kong_http_requests_total'
-      AND ResourceAttributes['k8s.cluster.name'] IN 'prod-cluster'
-      AND Attributes['team'] IN '{team}'
-      AND Attributes['path'] IN ('{endpoint}')
-      AND Attributes['code'] LIKE '5%'
-      AND Flags = 0
-      GROUP BY t, path, team, code
-      ORDER BY t
+      AND SpanKind = 'Server'
+      AND SpanAttributes['kong_service_name'] IN ('{service}')
+      AND ResourceAttributes['environment'] = '{env}'
+      AND SpanAttributes['team'] IN ('{team}')
+      AND SpanAttributes['http.route'] IN ('{endpoint}')
     latency: |
       SELECT
           $timeSeries AS t,
-          Attributes['path'] AS path,
-          quantile(0.95)(Sum/Count) AS p95_latency
-      FROM $table
+          SpanAttributes['http.route'] AS path,
+          quantile(0.95)(Duration / 1000000) AS p95_latency_ms
+      FROM kulu.{table}
       WHERE $timeFilter
-      AND MetricName = 'kong_request_latency_ms'
-      AND Attributes['env'] IN '{env}'
-      AND Attributes['path'] IN ('{endpoint}')
-      AND Flags = 0
+      AND SpanAttributes['kong_service_name'] IN ('{service}')
+      AND SpanAttributes['team'] IN ('{team}')
+      AND ResourceAttributes['environment'] IN ('{env}')
+      AND SpanAttributes['http.route'] IN ('{endpoint}')
       GROUP BY t, path
       ORDER BY t
