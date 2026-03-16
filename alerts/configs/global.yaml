@@ -28,13 +28,13 @@ datasource:
       SELECT
           ROUND(
               countIf(
-                  SpanAttributes['http.status_code'] LIKE '2%'
-                  OR SpanAttributes['http.response.status_code'] LIKE '2%'
-              ) * 100.0 /
+                  SpanAttributes['http.status_code'] LIKE '5%'
+                  OR SpanAttributes['http.response.status_code'] LIKE '5%'
+              ) /
               countIf(
                   SpanAttributes['http.status_code'] != ''
                   OR SpanAttributes['http.response.status_code'] != ''
-              ), 2) AS ErrorRate
+              ) * 100, 2) AS ErrorRate
       FROM kulu.{table}
       WHERE $timeFilter
       AND SpanKind = 'Server'
