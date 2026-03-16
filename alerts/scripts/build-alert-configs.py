@@ -182,16 +182,16 @@ def build_outputs(spec_dir: Path, global_config_path: Path, team_filter=None, ap
                             "contactPoint": platform_cfg["contactPoint"],
                         }
 
-                        grouped_rules[(env, interval_seconds)].append(rule)
+                        grouped_rules[(team_dir.name, env, interval_seconds)].append(rule)
 
     alert_groups = []
     rules_remaining = limit
-    for (env, interval_seconds), rules in sorted(grouped_rules.items()):
+    for (team_name, env, interval_seconds), rules in sorted(grouped_rules.items()):
         if rules_remaining is not None:
             rules = rules[:rules_remaining]
             rules_remaining -= len(rules)
         alert_groups.append({
-            "name": f"api-alerts-{env}-{interval_seconds}s",
+            "name": f"api-alerts-{team_name}-{env}-{interval_seconds}s",
             "interval": interval_seconds,
             "alertRules": rules,
         })
