@@ -1,9 +1,13 @@
 SPEC_DIR ?= ../specs
 GLOBAL_CONFIG ?= configs/global.yaml
 GENERATED_DIR ?= generated
-ALERT_CONFIGS_JSON ?= $(GENERATED_DIR)/alert-configs.json
+TEAM ?=
+API ?=
+LIMIT ?=
+_TEAM_SUFFIX := $(if $(TEAM),-$(TEAM),)
+ALERT_CONFIGS_JSON ?= $(GENERATED_DIR)/alert-configs$(_TEAM_SUFFIX).json
 TEAM_CONFIG_JSON ?= $(GENERATED_DIR)/team-config.json
-RESOURCES_JSON ?= $(GENERATED_DIR)/resources.json
+RESOURCES_JSON ?= $(GENERATED_DIR)/resources$(_TEAM_SUFFIX).json
 
 validate:
 	@echo "=== Validating specs ==="
@@ -11,13 +15,16 @@ validate:
 		--spec-dir "$(SPEC_DIR)"
 
 build-inputs: validate
-	@echo "=== Building alert inputs ==="
+	@echo "=== Building alert inputs$(if $(TEAM), for team: $(TEAM),) ==="
 	@mkdir -p "$(GENERATED_DIR)"
 	python3 scripts/build-alert-configs.py \
 		--spec-dir "$(SPEC_DIR)" \
 		--global-config "$(GLOBAL_CONFIG)" \
 		--alert-configs-out "$(ALERT_CONFIGS_JSON)" \
-		--team-config-out "$(TEAM_CONFIG_JSON)"
+		--team-config-out "$(TEAM_CONFIG_JSON)" \
+		$(if $(TEAM),--team "$(TEAM)",) \
+		$(if $(API),--api "$(API)",) \
+		$(if $(LIMIT),--limit "$(LIMIT)",)
 
 generate: build-inputs
 	@echo "=== Rendering resources ==="

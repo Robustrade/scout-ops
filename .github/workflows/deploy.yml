@@ -21,9 +21,29 @@ permissions:
   contents: read
 
 jobs:
-  deploy-alerts:
+  setup:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    outputs:
+      teams: ${{ steps.get-teams.outputs.teams }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Discover teams
+        id: get-teams
+        run: |
+          teams=$(ls specs/teams | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          echo "teams=$teams" >> $GITHUB_OUTPUT
+          echo "Discovered teams: $teams"
+
+  deploy:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        team: ${{ fromJson(needs.setup.outputs.teams) }}
+      fail-fast: false
     defaults:
       run:
         working-directory: alerts
@@ -40,14 +60,6 @@ jobs:
       #     path: specs
       #     token: ${{ secrets.SPECS_REPO_TOKEN || secrets.GITHUB_TOKEN }}
 
-      # - name: Ensure specs directory exists
-      #   run: |
-      #     if [ ! -d ../specs/teams ]; then
-      #       echo "ERROR: specs/teams/ not found."
-      #       echo "Set vars.SPECS_REPO to the specs repository, or commit specs/ locally in this repo."
-      #       exit 1
-      #     fi
-
       - name: Install grr
         run: |
           curl -fsSL https://github.com/grafana/grizzly/releases/latest/download/grr-linux-amd64 -o grr
@@ -55,37 +67,22 @@ jobs:
           sudo mv grr /usr/local/bin/
 
       - name: Configure grr
-        run: |
-            make config
+        run: make config
 
       - name: Install jsonnet
         run: |
           sudo apt-get update
           sudo apt-get install -y jsonnet
 
-      - name: Set workflow variables
-        run: |
-          echo "ACTION=${{ github.event.inputs.action }}" >> $GITHUB_ENV
+      - name: Generate resources for ${{ matrix.team }}
+        run: make generate TEAM=${{ matrix.team }}
 
-      - name: Generate resources
-        run: |
-          echo "Generating resources for action: $ACTION"
-          make generate
+      - name: Preview changes (diff) for ${{ matrix.team }}
+        if: ${{ github.event.inputs.action == 'diff' }}
+        run: grr diff generated/resources-${{ matrix.team }}.json
 
-      - name: Show generated resources
+      - name: Apply changes for ${{ matrix.team }}
+        if: ${{ github.event.inputs.action == 'apply' && github.ref == 'refs/heads/main' }}
         run: |
-          echo "=== GENERATED RESOURCES ==="
-          cat generated/resources.json
-
-      - name: Preview changes (diff)
-        if: ${{ env.ACTION == 'diff'}}
-        run: |
-          echo "=== DIFF ==="
-          make diff
-
-      - name: Apply changes
-        if: ${{ env.ACTION == 'apply' && github.ref == 'refs/heads/main' }}
-        run: |
-          echo "=== APPLY ==="
-          make apply
-          echo "=== CHANGES APPLIED ==="
+          grr apply generated/resources-${{ matrix.team }}.json
+          echo "=== CHANGES APPLIED for ${{ matrix.team }} ==="
