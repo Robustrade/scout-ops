@@ -157,6 +157,9 @@ def build_outputs(spec_dir: Path, global_config_path: Path, team_filter=None, ap
                         evaluator_type = "gt" if slo_cfg.get("operator", ">") == ">" else "lt"
                         team = api_tags.get("team", "")
 
+                        team_contact_points = platform_cfg.get("teamContactPoints", {})
+                        contact_point = team_contact_points.get(team_dir.name, platform_cfg["contactPoint"])
+
                         rule = {
                             "title": f"{api_name} {human_type} above {display}",
                             "labels": labels,
@@ -179,7 +182,7 @@ def build_outputs(spec_dir: Path, global_config_path: Path, team_filter=None, ap
                             "noDataState": alerting_defaults["noDataState"],
                             "execErrState": alerting_defaults["execErrState"],
                             "folderUid": platform_cfg["folderUid"],
-                            "contactPoint": platform_cfg["contactPoint"],
+                            "contactPoint": contact_point,
                         }
 
                         grouped_rules[(team_dir.name, env, interval_seconds)].append(rule)
