@@ -5,6 +5,14 @@ alertPlatform:
   folderUid: 'fffkvvrsokoaof'
   contactPoint: 'Kulu prod Alerts'
   labels: {}
+  teamContactPoints:
+    payments: 'Payment Team'
+    integrations: 'Integrations Team'
+    platform: 'Kulu prod Alerts'
+    portals: 'Portals Team'
+    iam: 'IAM Team'
+    iam-payments: 'IAM Team'
+    marketing: 'Marketing Team'
 
 defaults:
   alerting:
