@@ -1,0 +1,17 @@
+apis:
+  - name: kulu-v1-services-reference-details-post
+    slo:
+      error_rate:
+        threshold: 10
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
+  - name: kulu-v2-services-bills-post
+    slo:
+      error_rate:
+        threshold: 10
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
