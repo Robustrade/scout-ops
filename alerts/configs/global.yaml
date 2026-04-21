@@ -36,8 +36,8 @@ datasource:
       SELECT
           ROUND(
               countIf(
-                  SpanAttributes['http.status_code'] LIKE '5%'
-                  OR SpanAttributes['http.response.status_code'] LIKE '5%'
+                  (SpanAttributes['http.status_code'] LIKE '5%' AND SpanAttributes['http.status_code'] != '501')
+                  OR (SpanAttributes['http.response.status_code'] LIKE '5%' AND SpanAttributes['http.response.status_code'] != '501')
               ) /
               countIf(
                   SpanAttributes['http.status_code'] != ''
