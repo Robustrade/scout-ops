@@ -9,7 +9,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-id-get
   methods:
   - GET
@@ -19,7 +19,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-id-put
   methods:
   - PUT
@@ -29,7 +29,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-id-reward-per-view-patch
   methods:
   - PATCH
@@ -39,7 +39,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-id-reward-per-view-post
   methods:
   - POST
@@ -49,7 +49,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-side-menu-notifications-get
   methods:
   - GET
@@ -59,7 +59,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-campaign-view-post
   methods:
   - POST
@@ -69,7 +69,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-news-id-get
   methods:
   - GET
@@ -79,7 +79,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-news-id-put
   methods:
   - PUT
@@ -89,7 +89,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-news-id-status-patch
   methods:
   - PATCH
@@ -99,7 +99,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-news-view-post
   methods:
   - POST
@@ -109,7 +109,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-podcasts-id-get
   methods:
   - GET
@@ -119,7 +119,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-podcasts-id-status-patch
   methods:
   - PATCH
@@ -129,7 +129,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-backoffice-podcasts-view-post
   methods:
   - POST
@@ -139,7 +139,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-business-media-post
   methods:
   - POST
@@ -149,7 +149,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-ad-calculator-post
   methods:
   - POST
@@ -159,7 +159,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-content-link-types-get
   methods:
   - GET
@@ -169,7 +169,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-export-post
   methods:
   - POST
@@ -179,7 +179,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-calculate-post
   methods:
   - POST
@@ -189,7 +189,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-get
   methods:
   - GET
@@ -199,7 +199,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-purchase-post
   methods:
   - POST
@@ -209,7 +209,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-put
   methods:
   - PUT
@@ -219,7 +219,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-statistics-get
   methods:
   - GET
@@ -229,7 +229,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-statistics-post
   methods:
   - POST
@@ -239,7 +239,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-id-video-delete
   methods:
   - DELETE
@@ -249,7 +249,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-myTargeted-post
   methods:
   - POST
@@ -259,7 +259,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-post
   methods:
   - POST
@@ -269,7 +269,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-settings-get
   methods:
   - GET
@@ -279,7 +279,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-statuses-get
   methods:
   - GET
@@ -289,7 +289,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-view-post
   methods:
   - POST
@@ -299,7 +299,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-campaign-viewed-post
   methods:
   - POST
@@ -309,7 +309,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-media-id-get
   methods:
   - GET
@@ -319,7 +319,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-categories-get
   methods:
   - GET
@@ -329,7 +329,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-export-post
   methods:
   - POST
@@ -339,7 +339,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-id-calculate-post
   methods:
   - POST
@@ -349,7 +349,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-id-get
   methods:
   - GET
@@ -359,7 +359,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-id-purchase-post
   methods:
   - POST
@@ -369,7 +369,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-id-put
   methods:
   - PUT
@@ -379,7 +379,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-id-statistics-get
   methods:
   - GET
@@ -389,7 +389,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-post
   methods:
   - POST
@@ -399,7 +399,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-statuses-get
   methods:
   - GET
@@ -409,7 +409,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-upload-image-post
   methods:
   - POST
@@ -419,7 +419,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-view-dashboard-post
   methods:
   - POST
@@ -429,7 +429,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-view-my-post
   methods:
   - POST
@@ -439,7 +439,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-news-view-post
   methods:
   - POST
@@ -449,7 +449,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-categories-get
   methods:
   - GET
@@ -459,7 +459,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-export-post
   methods:
   - POST
@@ -469,7 +469,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-id-calculate-post
   methods:
   - POST
@@ -479,7 +479,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-id-get
   methods:
   - GET
@@ -489,7 +489,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-id-purchase-post
   methods:
   - POST
@@ -499,7 +499,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-id-put
   methods:
   - PUT
@@ -509,7 +509,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-id-statistics-get
   methods:
   - GET
@@ -519,7 +519,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-post
   methods:
   - POST
@@ -529,7 +529,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-statuses-get
   methods:
   - GET
@@ -539,7 +539,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-view-dashboard-post
   methods:
   - POST
@@ -549,7 +549,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-view-my-post
   methods:
   - POST
@@ -559,7 +559,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-podcasts-view-post
   methods:
   - POST
@@ -569,7 +569,7 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing
 - name: v1-tracking-post
   methods:
   - POST
@@ -579,4 +579,4 @@ apis:
   service:
     name: media_ads_service
   tags:
-    team: iam-payments
+    team: marketing

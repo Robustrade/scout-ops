@@ -9,7 +9,7 @@ apis:
   service:
     name: communication_service
   tags:
-    team: platform
+    team: marketing
 - name: v1-sms-webhook-provider
   methods:
   - GET
@@ -20,7 +20,7 @@ apis:
   service:
     name: communication_service
   tags:
-    team: platform
+    team: marketing
 - name: v1-sms-whatsapp-receive-get
   methods:
   - GET
@@ -30,7 +30,7 @@ apis:
   service:
     name: communication_service
   tags:
-    team: platform
+    team: marketing
 - name: v1-sms-whatsapp-receive-post
   methods:
   - POST
@@ -40,7 +40,7 @@ apis:
   service:
     name: communication_service
   tags:
-    team: platform
+    team: marketing
 - name: v1-sms-whatsapp_receive
   methods:
   - GET
@@ -51,4 +51,4 @@ apis:
   service:
     name: communication_service
   tags:
-    team: platform
+    team: marketing
