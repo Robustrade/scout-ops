@@ -1,0 +1,9 @@
+apis:
+  - name: v1-loyalty-programs-dashboard-get
+    slo:
+      error_rate:
+        threshold: 10
+        operator: ">"
+        unit: percent
+        window: 15m
+        alert: true

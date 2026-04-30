@@ -1,3 +1,4 @@
 .tool-versions
 alerts/generated/
 alerts/.venv/
+AGENTS.md

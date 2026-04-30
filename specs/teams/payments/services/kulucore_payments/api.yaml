@@ -860,16 +860,6 @@ apis:
     name: kulucore_payments
   tags:
     team: payments
-- name: v1-transfers-post
-  methods:
-  - POST
-  - OPTIONS
-  paths:
-  - "/v1/transfers"
-  service:
-    name: kulucore_payments
-  tags:
-    team: payments
 - name: v1-users-my-commission-get
   methods:
   - GET

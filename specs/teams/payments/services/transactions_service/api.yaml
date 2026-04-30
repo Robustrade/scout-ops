@@ -60,16 +60,6 @@ apis:
     name: transactions_service
   tags:
     team: payments
-- name: kulu-v1-transfer-check-post
-  methods:
-  - POST
-  - OPTIONS
-  paths:
-  - "/kulu/v1/transfer-check"
-  service:
-    name: transactions_service
-  tags:
-    team: payments
 - name: kulu-v2-backoffice-transactions-history-transactionId-check-get
   methods:
   - GET
@@ -196,16 +186,6 @@ apis:
   - OPTIONS
   paths:
   - "/v2/transactions-history/view"
-  service:
-    name: transactions_service
-  tags:
-    team: payments
-- name: v2-transfers-post
-  methods:
-  - POST
-  - OPTIONS
-  paths:
-  - "/v2/transfers"
   service:
     name: transactions_service
   tags:

@@ -7,3 +7,19 @@ apis:
         unit: percent
         window: 5m
         alert: true
+  - name: v1-backoffice-v2-transactions-history-view-post
+    slo:
+      latency:
+        threshold: 20000
+        operator: ">"
+        unit: ms
+        window: 5m
+        alert: true
+  - name: v1-backoffice-v5-transfers-post
+    slo:
+      latency:
+        threshold: 4000
+        operator: ">"
+        unit: ms
+        window: 10m
+        alert: true

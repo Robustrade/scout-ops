@@ -1,0 +1,9 @@
+apis:
+  - name: v1-agent-revenue-history-get
+    slo:
+      error_rate:
+        threshold: 20
+        operator: ">"
+        unit: percent
+        window: 5m
+        alert: true
